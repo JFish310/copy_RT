@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body{
+    line-height: 1.6;
+    font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+    font-size: 1.6rem;
+    color: #121212;
+    margin: 0;
+    /* font-weight: 400; */
+
+}
+
+p.Btn{
+    line-height: 1;
+    display: inline-block;
+
+
+}
+
+p.dumbbell_icon{
+    font-weight: 300;
+    text-align: center;
+    width: 1.25em;
+}
