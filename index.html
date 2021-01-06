@@ -8,7 +8,7 @@
         initial-scale=1.0 は、初期のズーム倍率 -->
     <meta name="description" content="最速で「稼げる」エンジニアになるためのエンジニアリングスクール RaiseTech(レイズテック)。徹底した現場主義と挫折しないサポートで、現役講師の授業をオンラインで好きな時に受講できます。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Users/raimi/Desktop/WP副業コース/copy/css/style.css"><!-- file://C:　　全パス入れないとだめみたい← -->
+    <!-- <link rel="stylesheet" href="/Users/raimi/Desktop/WP副業コース/copy/css/style.css">file://C:　　全パス入れないとだめみたい← -->
 
 
 
@@ -22,30 +22,103 @@
 
 <body>
     <header class="Header">
-        <p>
+        <p class="Header_logo">
         <a href="https://raise-tech.net/"><img src="/Users/raimi/Desktop/WP副業コース/copy/img/header-logo.svg" alt="ロゴ：RaiseTech"></a>
         </p><!-- ヘッダーロゴマーク -->
+        <p>最速で<strong>「稼げる」</strong>プロになる<br>
+        エンジニアリングスクール
+        </p>
+        <ul id="main_menu" class="menu">
+            <li><a href="https://raise-tech.net/about-raisetech">はじめての方へ</a>
+                <ul class="sub_menu">
+                    <li ><a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a></li>
+                    <li ><a href="https://raise-tech.net/support-and-trial">サポート体制とトライアル受講</a></li>
+                    <li ><a href="https://raise-tech.net/job-finding-support">就職・転職支援制度</a></li>
+                    <li ><a href="https://raise-tech.net/user-flow">ご利用の流れ</a></li>
+                </ul>
+            </li>
 
+            <li><a>コースのご案内</a>
+                <ul class="sub_menu">
+                    <li ><a href="https://raise-tech.net/courses/wordpress-sidejob-course">WordPress副業コース</a></li>
+                    <li ><a href="https://raise-tech.net/courses/aws-full-course">AWSフルコース</a></li>
+                    <li ><a href="https://raise-tech.net/courses/aws-automation-course">AWS自動化コース</a></li>
+                    <li ><a href="https://raise-tech.net/courses/java-full-course">Javaフルコース</a></li>
+                    <li ><a href="https://raise-tech.net/courses/java-framework-course">Javaフレームワークコース</a></li>
+                </ul>
+            </li>
 
+            <li><a href="https://raise-tech.net/graduates">卒業生の声</a></li>
 
+            <li><a href="https://raise-tech.net/faq">サポート</a>
+                <ul class="sub_menu">
+                    <li ><a href="https://raise-tech.net/faq">よくあるご質問</a></li>
+                    <li ><a href="https://raise-tech.net/inquiry">お問い合わせ</a></li>
+                </ul>
+            </li>
+
+            <li ><a href="https://raise-tech.net/application">受講お申し込み</a></li>
+        </ul><!-- ここまでがメニュー -->
     </header>
     <main class="Main" >
         <article>
             <div class="Top_Head">
                 <div class="Top_Head_layer1">
-
-                <p>
-                    はじめまして。RaiseTech（レイズテック）は<br>
-                    最速で「稼げる」エンジニアになるための、<br>
-                    実践的なWebエンジニアリングスクールです<br>
-                </p>
-                <!-- ↓ボタン↓ -->
-                <p class="Btn">
-                    <a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a>
-                </p>
+                    <p>
+                        <img src="/Users/raimi/Desktop/WP副業コース/copy/img/header-logo.svg" alt="ロゴ：RaiseTech">
+                        はじめまして。RaiseTech（レイズテック）は<br>
+                        最速で「稼げる」エンジニアになるための、<br>
+                        実践的なWebエンジニアリングスクールです<br>
+                    </p>
+                    <!-- ↓ボタン↓ -->
+                    <p class="Btn">
+                        <a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a>
+                    </p><!-- ↑ボタン↑ -->
+                </div>
+                <!-- 3つの理念 -->
+                <div class="Philosophy">
+                    <div class="Philosophy_entry">
+                        <div class="Philosophy_title">
+                            <p class="Philosophy_icon">
+                                <!-- ダンベルマーク -->
+                                <i class="fas fa-dumbbell"></i>
+                            </p>
+                            <p>現場主義</p>
+                        </div>
+                        <div class="Philosophy_sentence">
+                            <p>「プログラム」だけでは稼げない！ 現場で求められる「技術」のみ教えます。</p>
+                        </div>
+                    </div>
+                    <div class="Philosophy_entry">
+                        <div class="Philosophy_title">
+                            <p class="Philosophy_icon">
+                                <!-- 講師マーク -->
+                                <i class="fas fa-user-check"></i>
+                            </p>
+                            <p>現役講師</p>
+                        </div>
+                        <div class="Philosophy_sentence">
+                            <p>「今、求められている技術」をリアルタイムに教えてくれる、現役の技術者だけが講師です。</p>
+                        </div>
+                    </div>
+                    <div class="Philosophy_entry">
+                        <div class="Philosophy_title">
+                            <p class="Philosophy_icon">
+                                <!-- 浮き輪マーク -->
+                                <i class="far fa-life-ring"></i>
+                            </p>
+                            <p>徹底サポート</p>
+                        </div>
+                        <div class="Philosophy_sentence">
+                            <p>期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p>
+                        </div>
+                    </div>
+                </div><!-- ここまでが、3つの理念 -->
             </div>
 
-            <p class="dumbbell_icon">
+
+
+            <!-- <p class="dumbbell_icon">
                 <i class="fas fa-dumbbell"></i>
             </p>
             <p>現場主義</p>
@@ -57,12 +130,8 @@
             
             <i class="far fa-life-ring"></i>
             <p>徹底サポート</p>
-            <p>期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p>
-
+            <p>期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p> -->
         </article>
     </main>
-
-
-
 </body>
 </html>
