@@ -8,7 +8,7 @@
         initial-scale=1.0 は、初期のズーム倍率 -->
     <meta name="description" content="最速で「稼げる」エンジニアになるためのエンジニアリングスクール RaiseTech(レイズテック)。徹底した現場主義と挫折しないサポートで、現役講師の授業をオンラインで好きな時に受講できます。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/Users/raimi/Desktop/WP副業コース/copy/css/style.css">file://C:　　全パス入れないとだめみたい← -->
+    <link rel="stylesheet" href="/Users/raimi/LocalRep/copy_RT/css/style.css"><!--file://C:　　全パス入れないとだめみたい← -->
 
 
 
@@ -23,12 +23,37 @@
 <body>
     <header class="Header">
         <p class="Header_logo">
-        <a href="https://raise-tech.net/"><img src="/Users/raimi/Desktop/WP副業コース/copy/img/header-logo.svg" alt="ロゴ：RaiseTech"></a>
-        </p><!-- ヘッダーロゴマーク -->
+        <a href="https://raise-tech.net/"><img src="/Users/raimi/LocalRep/copy_RT/img/header-logo.svg" alt="ロゴ：RaiseTech"></a>
+        </p><!-- ヘッダーロゴマーク --><!--1200px以下でロゴマーク小さくなる-->
         <p>最速で<strong>「稼げる」</strong>プロになる<br>
         エンジニアリングスクール
-        </p>
+        </p><!--1280px以下で消える-->
         <ul id="main_menu" class="menu">
+            <!--ハンバーガーメニュー-->
+            <p class="Nav__btn">
+                <a href="javascript:void(0)" class="close">
+                    <span>メニューを開く
+
+                    </span>
+                </a>
+            </p>
+
+            <span class="nav_toggle">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <!--ハンバーガーメニューの中身-->
+            <nav class="nav">
+                <ul class="nav_menu_ul">
+                    <li class="nav_menu_li"><a href="#">TOP</a></li>
+                    <li class="nav_menu_li"><a href="#">ABOUT</a></li>
+                    <li class="nav_menu_li"><a href="#">BLOG</a></li>
+                    <li class="nav_menu_li"><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+
+
             <li><a href="https://raise-tech.net/about-raisetech">はじめての方へ</a>
                 <ul class="sub_menu">
                     <li ><a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a></li>
@@ -58,14 +83,14 @@
             </li>
 
             <li ><a href="https://raise-tech.net/application">受講お申し込み</a></li>
-        </ul><!-- ここまでがメニュー -->
+        </ul><!-- ここまでがメニュー --><!--メニューは1200px以下でメニューマークに変更-->
     </header>
     <main class="Main" >
         <article>
             <div class="Top_Head">
                 <div class="Top_Head_layer1">
                     <p>
-                        <img src="/Users/raimi/Desktop/WP副業コース/copy/img/header-logo.svg" alt="ロゴ：RaiseTech">
+                        <img src="/Users/raimi/LocalRep/copy_RT/img/header-logo.svg" alt="ロゴ：RaiseTech">
                         はじめまして。RaiseTech（レイズテック）は<br>
                         最速で「稼げる」エンジニアになるための、<br>
                         実践的なWebエンジニアリングスクールです<br>
@@ -74,7 +99,7 @@
                     <p class="Btn">
                         <a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a>
                     </p><!-- ↑ボタン↑ -->
-                </div>
+                </div><!--多分「窓が半分以下」になったら…Top_Head_layer1は背景の下に出てきて、RTのロゴは非表示-->
                 <!-- 3つの理念 -->
                 <div class="Philosophy">
                     <div class="Philosophy_entry">
@@ -113,7 +138,7 @@
                             <p>期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p>
                         </div>
                     </div>
-                </div><!-- ここまでが、3つの理念 -->
+                </div><!-- ここまでが、3つの理念 --><!--これも半分になったら縦に並ぶ-->
             </div>
 
 
