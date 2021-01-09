@@ -1,4 +1,20 @@
 @charset "UTF-8";
+
+
+@media (max-width: 1200px){
+    /*RTロゴのheight: 30px;（.Header_logo p img）*/
+    .Header .Header_logo p img {
+        height: 30px;
+        width: auto;
+        
+    }
+    /**/
+    /**/
+    /**/
+
+}
+
+
 body{
     line-height: 1.6;
     font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
