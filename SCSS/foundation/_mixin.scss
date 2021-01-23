@@ -1,0 +1,41 @@
+@mixin breakpoint( $breakpoint ) {
+    @if $breakpoint == width_1200{
+      @media ( min-width : 1200px ){
+        @content;
+      }
+    }
+
+    @if $breakpoint == width_1280{
+      @media ( min-width : 1280px ){
+        @content;
+      }
+    }
+  }
+
+
+
+/*
+
+  @mixin breakpoint( $point ) {
+    @if $point == pc {
+      @media ( min-width: 768px ) and ( max-width:1199px) {
+        @content ;
+      }
+    }
+    @if $point == wide {
+      @media ( min-width: 1200px ) {
+        @content ;
+      }
+    }
+    @if $point == sp-pc {
+      @media ( max-width: 1119px ) {
+        @content ;
+      }
+    }
+    @if $point == pc-wide {
+      @media ( min-width: 768px ) {
+        @content ;
+      }
+    }
+  }
+  */
