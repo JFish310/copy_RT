@@ -1,39 +1,93 @@
 @charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
 
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 0;
+}
 
-@media (max-width: 1200px){
-    /*RTロゴのheight: 30px;（.Header_logo p img）*/
-    .Header .Header_logo p img {
-        height: 30px;
-        width: auto;
-        
+img {
+  max-width: 100%;
+}
+
+/*
+
+  @mixin breakpoint( $point ) {
+    @if $point == pc {
+      @media ( min-width: 768px ) and ( max-width:1199px) {
+        @content ;
+      }
     }
-    /**/
-    /**/
-    /**/
-
+    @if $point == wide {
+      @media ( min-width: 1200px ) {
+        @content ;
+      }
+    }
+    @if $point == sp-pc {
+      @media ( max-width: 1119px ) {
+        @content ;
+      }
+    }
+    @if $point == pc-wide {
+      @media ( min-width: 768px ) {
+        @content ;
+      }
+    }
+  }
+  */
+/* RTロゴ */
+.Header p.Header_logo img {
+  height: 30px;
+  width: auto;
 }
 
-
-body{
-    line-height: 1.6;
-    font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
-    font-size: 1.6rem;
-    color: #121212;
-    margin: 0;
-    /* font-weight: 400; */
-
+@media (min-width: 1200px) {
+  .Header p.Header_logo img {
+    height: auto;
+  }
 }
 
-p.Btn{
-    line-height: 1;
-    display: inline-block;
-
-
+.c-btn {
+  display: block;
+  /*ブロックレベルで表示*/
+  width: 50px;
+  /*幅*/
+  height: 50px;
+  /*高さ*/
+  position: relative;
+  /*通常の位置を基準とした相対的な配置*/
+  z-index: 3;
+  /*値が大きいものほど前面（手前）に表示される （0 が基準）*/
+  border: none;
+  /*線なし*/
 }
 
-p.dumbbell_icon{
-    font-weight: 300;
-    text-align: center;
-    width: 1.25em;
+.bar {
+  width: 23px;
+  height: 2px;
+  display: block;
+  /*ブロックレベルで表示*/
+  position: absolute;
+  /*絶対位置*/
+  left: 50%;
+  transform: translateX(-50%);
+  /*X方向の子要素の半分戻る*/
+  background-color: #2bb8d9;
 }
+
+.bar_top {
+  top: 15px;
+}
+
+.bar_mid {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar_bottom {
+  bottom: 15px;
+}
+/*# sourceMappingURL=style.css.map */

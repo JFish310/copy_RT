@@ -1,0 +1,28 @@
+  .c-btn{
+    display: block;       /*ブロックレベルで表示*/
+    width: 50px;          /*幅*/
+    height: 50px;         /*高さ*/
+    position: relative;   /*通常の位置を基準とした相対的な配置*/
+    z-index: 3;           /*値が大きいものほど前面（手前）に表示される （0 が基準）*/
+    border:none;          /*線なし*/
+  }
+  .bar{
+    width: 23px;
+    height: 2px;
+    display: block;               /*ブロックレベルで表示*/
+    position: absolute;           /*絶対位置*/
+    left: 50%;      
+    transform: translateX(-50%);  /*X方向の子要素の半分戻る*/
+    background-color: $color--blue;
+  }
+
+  .bar_top{
+    top: 15px;
+  }
+  .bar_mid{
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+    bottom: 15px;
+  }

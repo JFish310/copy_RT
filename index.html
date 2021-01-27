@@ -8,42 +8,60 @@
         initial-scale=1.0 は、初期のズーム倍率 -->
     <meta name="description" content="最速で「稼げる」エンジニアになるためのエンジニアリングスクール RaiseTech(レイズテック)。徹底した現場主義と挫折しないサポートで、現役講師の授業をオンラインで好きな時に受講できます。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"><!--file://C:　　全パス入れないとだめみたい← -->
-
-
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="css/style.css">
 
     <title>RaiseTech（レイズテック） | 最速で稼げるプロになるエンジニアリングスクール</title>
     <!-- ファビコン -->
     <link rel="icon" type="img" href="img/favicon.ico">
     <!-- Font Awesome の読み込み -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-
+    <!-- jQueryの読み込み -->
+    <!-- <script type="text/javascript" src="jquery-3.5.1.min.js"></script>  ←こっちだとローカル環境対応 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="Header">
         <p class="Header_logo">
-        <a href="https://raise-tech.net/"><img src="./img/header-logo.svg" alt="ロゴ：RaiseTech"></a>
-        </p><!-- ヘッダーロゴマーク --><!--1200px以下でロゴマーク小さくなる-->
-        <p>最速で<strong>「稼げる」</strong>プロになる<br>
+            <a href="https://raise-tech.net/"><img src="./img/header-logo.svg" alt="ロゴ：RaiseTech"></a>
+        </p><!-- ヘッダーロゴマーク --><!--1201px以上でロゴマーク大きくなる-->
+
+        <!--<p>最速で<strong>「稼げる」</strong>プロになる<br>
         エンジニアリングスクール
-        </p><!--1280px以下で消える-->
+        </p>1281px以上で出てくる-->
+
+        <!--ハンバーガーボタン-->
+        <div class="c-btn">
+            <span class="bar bar_top"></span>
+            <span class="bar bar_mid"></span>
+            <span class="bar bar_bottom"></span>
+        </div>
+
+
+<!--
+        <div class="nav-wrapper">②ナビゲーションメニュー
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="https://crestadesign.org/">About</a></li>
+                    <li class="nav-item"><a href="https://crestadesign.org/">News</a></li>
+                    <li class="nav-item"><a href="https://crestadesign.org/">Access</a></li>
+                </ul>
+            </nav>
+        </div>-->
+        
         <ul id="main_menu" class="menu">
             <!--ハンバーガーメニュー-->
-            <p class="Nav__btn">
+            <!-- <p class="Nav__btn">
                 <a href="javascript:void(0)" class="close">
                     <span>メニューを開く
 
                     </span>
                 </a>
-            </p>
+            </p> -->
 
-            <span class="nav_toggle">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-            <!--ハンバーガーメニューの中身-->
+            
+            <!--ハンバーガーメニューの中身
             <nav class="nav">
                 <ul class="nav_menu_ul">
                     <li class="nav_menu_li"><a href="#">TOP</a></li>
@@ -51,10 +69,10 @@
                     <li class="nav_menu_li"><a href="#">BLOG</a></li>
                     <li class="nav_menu_li"><a href="#">CONTACT</a></li>
                 </ul>
-            </nav>
+            </nav>-->
 
 
-            <li><a href="https://raise-tech.net/about-raisetech">はじめての方へ</a>
+            <li class="nav_menu_li"><a href="https://raise-tech.net/about-raisetech">はじめての方へ</a>
                 <ul class="sub_menu">
                     <li ><a href="https://raise-tech.net/about-raisetech">マンガでわかるRaiseTech</a></li>
                     <li ><a href="https://raise-tech.net/support-and-trial">サポート体制とトライアル受講</a></li>
@@ -63,28 +81,36 @@
                 </ul>
             </li>
 
-            <li><a>コースのご案内</a>
+            <li class="nav_menu_li"><a>コースのご案内</a>
                 <ul class="sub_menu">
-                    <li ><a href="https://raise-tech.net/courses/wordpress-sidejob-course">WordPress副業コース</a></li>
-                    <li ><a href="https://raise-tech.net/courses/aws-full-course">AWSフルコース</a></li>
-                    <li ><a href="https://raise-tech.net/courses/aws-automation-course">AWS自動化コース</a></li>
-                    <li ><a href="https://raise-tech.net/courses/java-full-course">Javaフルコース</a></li>
-                    <li ><a href="https://raise-tech.net/courses/java-framework-course">Javaフレームワークコース</a></li>
+                    <li><a href="">マーケティングコース</a></li>
+                    <li><a href="">デザインコース</a></li>
+                    <li><a href="https://raise-tech.net/courses/wordpress-sidejob-course">WordPress副業コース</a></li>
+                    <li><a href="https://raise-tech.net/courses/aws-full-course">AWSフルコース</a></li>
+                    <li><a href="https://raise-tech.net/courses/aws-automation-course">AWS自動化コース</a></li>
+                    <li><a href="https://raise-tech.net/courses/java-full-course">Javaフルコース</a></li>
+                    <li><a href="https://raise-tech.net/courses/java-framework-course">Javaフレームワークコース</a></li>
                 </ul>
             </li>
 
-            <li><a href="https://raise-tech.net/graduates">卒業生の声</a></li>
+            <li class="nav_menu_li"><a href="https://raise-tech.net/graduates">卒業生の声</a></li>
 
-            <li><a href="https://raise-tech.net/faq">サポート</a>
+            <li class="nav_menu_li"><a href="https://raise-tech.net/faq">サポート</a>
                 <ul class="sub_menu">
-                    <li ><a href="https://raise-tech.net/faq">よくあるご質問</a></li>
-                    <li ><a href="https://raise-tech.net/inquiry">お問い合わせ</a></li>
+                    <li><a href="https://raise-tech.net/faq">よくあるご質問</a></li>
+                    <li><a href="https://raise-tech.net/inquiry">お問い合わせ</a></li>
                 </ul>
             </li>
 
-            <li ><a href="https://raise-tech.net/application">受講お申し込み</a></li>
+            <li class="nav_menu_li"><a href="https://raise-tech.net/application">受講お申し込み</a></li>
         </ul><!-- ここまでがメニュー --><!--メニューは1200px以下でメニューマークに変更-->
     </header>
+
+
+
+
+
+
     <main class="Main" >
         <article>
             <div class="Top_Head">
