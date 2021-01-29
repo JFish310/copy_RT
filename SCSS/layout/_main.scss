@@ -1,0 +1,69 @@
+    /* はじめての方のRTロゴ */
+    .Main .Top_Head .Top_Head_layer1 img{
+      display: none;
+      @include breakpoint( width_768 ){
+        display: block;
+        height: auto;
+      }
+    }
+    // 最初の説明文
+    .Main .Top_Head .Top_Head_layer1 p{
+      color: $color--sentence-black;
+      font-size: 1.3rem;
+      margin: .5em 0;
+      font-weight: 700;   // フォントの太さ      
+    }
+    .Main .Top_Head .Top_Head_layer1{
+      width: 100%;
+      max-width: 100%;
+      padding: 9px 0 13px;
+      border-radius: 0;
+      background-color: $color--white;
+      text-align: center;
+      @include breakpoint( width_768 ){
+        max-width: 530px;
+        border-radius: 10px;
+        padding: 43px 40px 19px;
+      }
+    }
+
+    // 理念
+    .Main .Top_Head .Philosophy{
+      background-color: $color--black;
+      color: $color--white;
+    }
+
+    .Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title .Philosophy_icon{
+      display: flex;
+      // -webkit-box-pack: center;
+      justify-content: center;  /* アイテムを中央に寄せる */
+      align-items: center;
+      width: 230px;
+      height: 230px;
+      margin: 0 auto;
+      color: $color--black;
+      border: solid 6px $color--black;
+      border-radius: 50%;       /* サークル */
+      background: $color--white;
+      font-size: 100px;
+    }
+
+
+
+    .Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title p{
+      text-align: center;
+      margin: .2em 0 0;
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+
+    .Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_sentence{
+      text-align: center;
+      margin: .5em 0 0;
+      line-height: 1.7;
+      font-weight: 700;
+    }
+
+
+
+/*  */

@@ -1,3 +1,4 @@
+  /* ハンバーガーメニューボタン */
   .c-btn{
     display: block;       /*ブロックレベルで表示*/
     width: 50px;          /*幅*/
@@ -16,6 +17,7 @@
     background-color: $color--blue;
   }
 
+  /* 三本線のマージン指定 */
   .bar_top{
     top: 15px;
   }
@@ -26,3 +28,38 @@
   .bar_bottom{
     bottom: 15px;
   }
+
+  /* ボタンをクローズ */
+  .c-btn.close .bar_top{
+    transform: translate(-50%, 10px) rotate(45deg);
+    transition: transform .2s;
+  }
+  .c-btn.close .bar_mid{
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .c-btn.close .bar_bottom{
+    transform: translate( -50%, -8px) rotate(-45deg);
+    transition: transform .2s;
+  }
+
+  /*マンガでわかるボタン*/
+  p.c-btn-first{
+    padding: 12px 18px;
+    width: auto;          /*幅*/
+    height: auto;         /*高さ*/
+    // margin: 0 10px 1em 5px;
+    display: inline-block;    
+    border-radius: 4px; // 四隅を丸く
+    font-weight: 700;   // フォントの太さ
+    line-height: 1;
+    display: inline-block;
+    background-color: $color--deep-blue;
+    border: solid 1px #c3c3c3;
+    margin: 1.3em 0 .5em;
+    a{
+      color: $color--white;
+      font-size: 1.6rem;
+    }
+  }
+

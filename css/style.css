@@ -6,11 +6,16 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.6;
-  margin: 0;
+  font-weight: 400;
+  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
 }
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*
@@ -50,6 +55,80 @@ img {
   }
 }
 
+/* ハンバーガーメニューボタン */
+/* はじめての方のRTロゴ */
+.Main .Top_Head .Top_Head_layer1 img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Main .Top_Head .Top_Head_layer1 img {
+    display: block;
+    height: auto;
+  }
+}
+
+.Main .Top_Head .Top_Head_layer1 p {
+  color: #121212;
+  font-size: 1.3rem;
+  margin: .5em 0;
+  font-weight: 700;
+}
+
+.Main .Top_Head .Top_Head_layer1 {
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 0 13px;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .Main .Top_Head .Top_Head_layer1 {
+    max-width: 530px;
+    border-radius: 10px;
+    padding: 43px 40px 19px;
+  }
+}
+
+.Main .Top_Head .Philosophy {
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title .Philosophy_icon {
+  display: flex;
+  justify-content: center;
+  /* アイテムを中央に寄せる */
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+  color: #121212;
+  border: solid 6px #121212;
+  border-radius: 50%;
+  /* サークル */
+  background: #FFFFFF;
+  font-size: 100px;
+}
+
+.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title p {
+  text-align: center;
+  margin: .2em 0 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_sentence {
+  text-align: center;
+  margin: .5em 0 0;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+/*  */
+/* ハンバーガーメニューボタン */
 .c-btn {
   display: block;
   /*ブロックレベルで表示*/
@@ -78,6 +157,7 @@ img {
   background-color: #2bb8d9;
 }
 
+/* 三本線のマージン指定 */
 .bar_top {
   top: 15px;
 }
@@ -89,5 +169,43 @@ img {
 
 .bar_bottom {
   bottom: 15px;
+}
+
+/* ボタンをクローズ */
+.c-btn.close .bar_top {
+  transform: translate(-50%, 10px) rotate(45deg);
+  transition: transform .2s;
+}
+
+.c-btn.close .bar_mid {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.c-btn.close .bar_bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform .2s;
+}
+
+/*マンガでわかるボタン*/
+p.c-btn-first {
+  padding: 12px 18px;
+  width: auto;
+  /*幅*/
+  height: auto;
+  /*高さ*/
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  background-color: #2498b3;
+  border: solid 1px #c3c3c3;
+  margin: 1.3em 0 .5em;
+}
+
+p.c-btn-first a {
+  color: #FFFFFF;
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=style.css.map */

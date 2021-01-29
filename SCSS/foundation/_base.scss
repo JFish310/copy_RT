@@ -4,16 +4,15 @@ html {
   
 body{
     font-size: 1.6rem;
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.6;   // 行の高さ
+    font-weight: 400;   // フォントの太さ（基本400）
+    font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;    
 }
 
 img{
     max-width: 100%;
 }
 
-
-// body{
-//     font-weight: 400;
-//     // font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
-// }
+a{
+    text-decoration: none;
+}
