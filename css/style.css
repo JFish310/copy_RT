@@ -82,6 +82,10 @@ a {
   border-radius: 0;
   background-color: #FFFFFF;
   text-align: center;
+  justify-content: center;
+  padding-top: 80px;
+  background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero1.png) no-repeat center center;
+  z-index: 200;
 }
 
 @media (min-width: 768px) {
@@ -93,8 +97,14 @@ a {
 }
 
 .Main .Top_Head .Philosophy {
-  background-color: #121212;
+  background-color: #000000;
   color: #FFFFFF;
+  padding: 4em 0;
+  margin: 0 10px;
+}
+
+.Main .Top_Head .Philosophy .Philosophy_entry {
+  margin-bottom: 2.5em;
 }
 
 .Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title .Philosophy_icon {
@@ -105,8 +115,8 @@ a {
   width: 230px;
   height: 230px;
   margin: 0 auto;
-  color: #121212;
-  border: solid 6px #121212;
+  color: #000000;
+  border: solid 6px #000000;
   border-radius: 50%;
   /* サークル */
   background: #FFFFFF;
@@ -114,6 +124,11 @@ a {
 }
 
 .Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   text-align: center;
   margin: .2em 0 0;
   font-weight: 700;
