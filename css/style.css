@@ -43,6 +43,18 @@ a {
     }
   }
   */
+/* ヘッダー全般 */
+/*.Header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる 
+    background: $color--white;
+    z-index: 1100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }*/
 /* RTロゴ */
 .Header p.Header_logo img {
   height: 30px;
@@ -56,26 +68,20 @@ a {
 }
 
 /* ハンバーガーメニューボタン */
-/* はじめての方のRTロゴ */
-.Main .Top_Head .Top_Head_layer1 img {
-  display: none;
+/* 3枚目の背景画像の設定 */
+.Top_Head {
+  height: 300px;
+  padding-bottom: 320px;
+  background-position: center -25px;
+  position: relative;
+  overflow: hidden;
+  background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero3.png) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-@media (min-width: 768px) {
-  .Main .Top_Head .Top_Head_layer1 img {
-    display: block;
-    height: auto;
-  }
-}
-
-.Main .Top_Head .Top_Head_layer1 p {
-  color: #121212;
-  font-size: 1.3rem;
-  margin: .5em 0;
-  font-weight: 700;
-}
-
-.Main .Top_Head .Top_Head_layer1 {
+/* 最初の説明文全体のところ */
+.Top_Head_layer1 {
   width: 100%;
   max-width: 100%;
   padding: 9px 0 13px;
@@ -86,28 +92,59 @@ a {
   padding-top: 80px;
   background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero1.png) no-repeat center center;
   z-index: 200;
+  /* 「はじめまして」の文章のところ */
 }
 
 @media (min-width: 768px) {
-  .Main .Top_Head .Top_Head_layer1 {
+  .Top_Head_layer1 {
     max-width: 530px;
     border-radius: 10px;
     padding: 43px 40px 19px;
   }
 }
 
-.Main .Top_Head .Philosophy {
+.Top_Head_layer1 p {
+  color: #121212;
+  font-size: 1.3rem;
+  margin: .5em 0;
+  font-weight: 700;
+}
+
+.Top_Head_layer1 p img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Top_Head_layer1 p img {
+    display: block;
+    height: auto;
+  }
+}
+
+.Philosophy {
   background-color: #000000;
   color: #FFFFFF;
   padding: 4em 0;
   margin: 0 10px;
 }
 
-.Main .Top_Head .Philosophy .Philosophy_entry {
+.Philosophy_entry {
   margin-bottom: 2.5em;
 }
 
-.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title .Philosophy_icon {
+.Philosophy_title p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  margin: .2em 0 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.Philosophy_icon {
   display: flex;
   justify-content: center;
   /* アイテムを中央に寄せる */
@@ -123,19 +160,7 @@ a {
   font-size: 100px;
 }
 
-.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_title p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  text-align: center;
-  margin: .2em 0 0;
-  font-weight: 700;
-  font-size: 2.4rem;
-}
-
-.Main .Top_Head .Philosophy .Philosophy_entry .Philosophy_sentence {
+.Philosophy_sentence {
   text-align: center;
   margin: .5em 0 0;
   line-height: 1.7;
@@ -188,7 +213,7 @@ a {
 
 /* ボタンをクローズ */
 .c-btn.close .bar_top {
-  transform: translate(-50%, 10px) rotate(45deg);
+  transform: translate(-50%, 10px) rotate(135deg);
   transition: transform .2s;
 }
 
@@ -198,7 +223,7 @@ a {
 }
 
 .c-btn.close .bar_bottom {
-  transform: translate(-50%, -8px) rotate(-45deg);
+  transform: translate(-50%, -8px) rotate(-135deg);
   transition: transform .2s;
 }
 
@@ -209,11 +234,11 @@ p.c-btn-first {
   /*幅*/
   height: auto;
   /*高さ*/
+  margin: 0 10px 1em 5px;
   display: inline-block;
   border-radius: 4px;
   font-weight: 700;
   line-height: 1;
-  display: inline-block;
   background-color: #2498b3;
   border: solid 1px #c3c3c3;
   margin: 1.3em 0 .5em;

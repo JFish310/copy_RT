@@ -1,4 +1,18 @@
-    /* RTロゴ */
+  /* ヘッダー全般 */
+  /*.Header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる 
+    background: $color--white;
+    z-index: 1100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }*/
+
+
+/* RTロゴ */
     .Header p.Header_logo img{
       height: 30px;
       width: auto;
