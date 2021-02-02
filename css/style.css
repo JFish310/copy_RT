@@ -69,59 +69,79 @@ a {
 
 /* ハンバーガーメニューボタン */
 /* 3枚目の背景画像の設定 */
-.Top_Head {
+.p-Top_Head {
   height: 300px;
   padding-bottom: 320px;
-  background-position: center -25px;
   position: relative;
   overflow: hidden;
-  background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero3.png) no-repeat center center;
+  background-image: url("../img/bg-hero3.png");
+  background-repeat: no-repeat;
+  background-position: center -25px;
   background-size: cover;
   background-attachment: fixed;
 }
 
 /* 最初の説明文全体のところ */
-.Top_Head_layer1 {
+.p-Top_Head_layer1 {
+  /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
+  position: absolute;
+  top: 0;
   width: 100%;
-  max-width: 100%;
-  padding: 9px 0 13px;
-  border-radius: 0;
-  background-color: #FFFFFF;
-  text-align: center;
+  height: 100%;
+  /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
   justify-content: center;
+  /* アイテムを中央に寄せる */
   padding-top: 80px;
-  background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero1.png) no-repeat center center;
+  align-items: flex-end;
+  /* フレックスアイテムを末尾にまとめる */
+  background-image: url("../img/bg-hero1.png");
+  background-repeat: no-repeat;
+  background-position: center -30px;
+  background-size: cover;
   z-index: 200;
   /* 「はじめまして」の文章のところ */
 }
 
 @media (min-width: 768px) {
-  .Top_Head_layer1 {
+  .p-Top_Head_layer1 {
     max-width: 530px;
     border-radius: 10px;
     padding: 43px 40px 19px;
   }
 }
 
-.Top_Head_layer1 p {
+.p-Top_Head_layer1 p {
   color: #121212;
   font-size: 1.3rem;
   margin: .5em 0;
   font-weight: 700;
 }
 
-.Top_Head_layer1 p img {
+.p-Top_Head_layer1 p img {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .Top_Head_layer1 p img {
+  .p-Top_Head_layer1 p img {
     display: block;
     height: auto;
   }
 }
 
-.Philosophy {
+.p-Top_Head_layer2 {
+  /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
+  background-image: url("../img/bg-hero2.png");
+  background-repeat: no-repeat;
+  background-position: center -25px;
+  background-size: cover;
+}
+
+.p-Philosophy {
   background-color: #000000;
   color: #FFFFFF;
   padding: 4em 0;

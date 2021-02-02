@@ -1,28 +1,42 @@
     /* 3枚目の背景画像の設定 */
-    .Top_Head{
-      height: 300px;
-      padding-bottom: 320px;
-      background-position: center -25px;
-      position: relative;
-      overflow: hidden;
-      background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero3.png) no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
+    .p-Top_Head{
+      height: 300px;  // 高さ
+      padding-bottom: 320px;  
+      position: relative; // 相対位置への配置
+      overflow: hidden; // 内容がボックスに収まらない場合、収まらない部分は非表示となる。内容が収まらない場合にも、スクロールバーなどは表示されない
+      background-image: url("../img/bg-hero3.png");
+      background-repeat: no-repeat;
+      background-position: center -25px;  // x=真ん中, y=-25pxなので上に25pxずれる
+      background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
+      background-attachment: fixed; // 背景はビューポートに対する相対位置で固定される
     }
     
     /* 最初の説明文全体のところ */
-    .Top_Head_layer1{
+    .p-Top_Head_layer1{
+      /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
+      position: absolute;
+      top: 0;
       width: 100%;
-      max-width: 100%;
-      padding: 9px 0 13px;
-      border-radius: 0;
-      background-color: $color--white;
-      text-align: center;
-      //display: flex;
-      justify-content: center;
-      padding-top: 80px;
-      background: transparent url(/Users/raimi/LocalRep/copy_RT/img/bg-hero1.png) no-repeat center center;
-      z-index: 200;
+      height: 100%;  // 高さ
+      /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
+
+      //max-width: 100%;
+      //padding: 9px 0 13px;
+      //border-radius: 0;
+      //background-color: $color--white;
+      //text-align: center;
+        //display: flex;  // その直下の要素が並列になるスタイル
+        justify-content: center;  /* アイテムを中央に寄せる */
+        padding-top: 80px;
+
+        align-items: flex-end;  /* フレックスアイテムを末尾にまとめる */
+
+        background-image: url("../img/bg-hero1.png");
+        background-repeat: no-repeat;
+        background-position: center -30px;  // x=真ん中, y=-30px
+        background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
+
+        z-index: 200;
       
       @include breakpoint( width_768 ){
         max-width: 530px;
@@ -46,9 +60,23 @@
         }
       }
     }
+    .p-Top_Head_layer2{
+      /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;  // 高さ
+      /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
+      background-image: url("../img/bg-hero2.png");
+      background-repeat: no-repeat;
+      background-position: center -25px;  // x=真ん中, y=-25px
+      background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
+
+      //z-index: 100;
+    }
 
     // 理念
-    .Philosophy{
+    .p-Philosophy{
       background-color: $color--black;
       color: $color--white;
       padding: 4em 0;
@@ -75,7 +103,7 @@
     // アイコン
     .Philosophy_icon{
       display: flex;
-      // -webkit-box-pack: center;
+      // -webkit-box-pack: center;  // Google Chrome、Safari向け
       justify-content: center;  /* アイテムを中央に寄せる */
       align-items: center;
       width: 230px;
