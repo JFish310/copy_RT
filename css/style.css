@@ -44,17 +44,17 @@ a {
   }
   */
 /* ヘッダー全般 */
-/*.Header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;  各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる 
-    background: $color--white;
-    z-index: 1100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-  }*/
+.Header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  z-index: 1100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 /* RTロゴ */
 .Header p.Header_logo img {
   height: 30px;
@@ -68,10 +68,13 @@ a {
 }
 
 /* ハンバーガーメニューボタン */
+.Main {
+  padding-top: 50px;
+}
+
 /* 3枚目の背景画像の設定 */
 .p-Top_Head {
   height: 300px;
-  padding-bottom: 320px;
   position: relative;
   overflow: hidden;
   background-image: url("../img/bg-hero3.png");
@@ -99,7 +102,6 @@ a {
   background-position: center -30px;
   background-size: cover;
   z-index: 200;
-  /* 「はじめまして」の文章のところ */
 }
 
 @media (min-width: 768px) {
@@ -110,19 +112,29 @@ a {
   }
 }
 
-.p-Top_Head_layer1 p {
+.p-Top_Head_body {
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 0 13px;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  text-align: center;
+  /* 「はじめまして」の文章のところ */
+}
+
+.p-Top_Head_body p {
   color: #121212;
   font-size: 1.3rem;
   margin: .5em 0;
   font-weight: 700;
 }
 
-.p-Top_Head_layer1 p img {
+.p-Top_Head_body img {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .p-Top_Head_layer1 p img {
+  .p-Top_Head_body img {
     display: block;
     height: auto;
   }
@@ -141,27 +153,41 @@ a {
   background-size: cover;
 }
 
+.c-wrap {
+  margin: 0 10px;
+  max-width: 1078px;
+}
+
 .p-Philosophy {
+  margin-top: 0;
+  flex-direction: column;
+  /* 積み重なるように配置する */
+  align-items: center;
   background-color: #000000;
   color: #FFFFFF;
   padding: 4em 0;
-  margin: 0 10px;
 }
 
 .Philosophy_entry {
   margin-bottom: 2.5em;
+  width: auto;
 }
 
-.Philosophy_title p {
+.Philosophy_title {
   display: block;
+  justify-content: center;
+  /* アイテムを中央に寄せる */
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   text-align: center;
   margin: .2em 0 0;
-  font-weight: 700;
   font-size: 2.4rem;
+}
+
+.Philosophy_title p {
+  font-weight: 700;
 }
 
 .Philosophy_icon {
@@ -181,7 +207,10 @@ a {
 }
 
 .Philosophy_sentence {
-  text-align: center;
+  text-align: left;
+}
+
+.Philosophy_sentence p {
   margin: .5em 0 0;
   line-height: 1.7;
   font-weight: 700;

@@ -1,7 +1,11 @@
+    .Main{
+      padding-top: 50px;
+    }
+    
     /* 3枚目の背景画像の設定 */
     .p-Top_Head{
       height: 300px;  // 高さ
-      padding-bottom: 320px;  
+      //padding-bottom: 320px;  
       position: relative; // 相対位置への配置
       overflow: hidden; // 内容がボックスに収まらない場合、収まらない部分は非表示となる。内容が収まらない場合にも、スクロールバーなどは表示されない
       background-image: url("../img/bg-hero3.png");
@@ -20,11 +24,6 @@
       height: 100%;  // 高さ
       /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
 
-      //max-width: 100%;
-      //padding: 9px 0 13px;
-      //border-radius: 0;
-      //background-color: $color--white;
-      //text-align: center;
         //display: flex;  // その直下の要素が並列になるスタイル
         justify-content: center;  /* アイテムを中央に寄せる */
         padding-top: 80px;
@@ -43,20 +42,27 @@
         border-radius: 10px;
         padding: 43px 40px 19px;
       }
+    }
 
+    .p-Top_Head_body{
+      width: 100%;
+      max-width: 100%;
+      padding: 9px 0 13px;
+      border-radius: 0; //四隅
+      background-color: $color--white;
+      text-align: center;
       /* 「はじめまして」の文章のところ */
       p{
         color: $color--sentence-black;
         font-size: 1.3rem;
         margin: .5em 0;
         font-weight: 700;   // フォントの太さ
-        // 「はじめまして」上のRTロゴ
-        img{
-          display: none;
-          @include breakpoint( width_768 ){
-            display: block;
-            height: auto;
-          }
+        }// 「はじめまして」上のRTロゴ
+      img{
+        display: none;
+        @include breakpoint( width_768 ){
+          display: block;
+          height: auto;
         }
       }
     }
@@ -75,29 +81,41 @@
       //z-index: 100;
     }
 
+    .c-wrap{
+      margin: 0 10px;
+      max-width: 1078px;
+    }
     // 理念
     .p-Philosophy{
+      margin-top: 0;
+      flex-direction: column; /* 積み重なるように配置する */
+      align-items: center;
+
       background-color: $color--black;
       color: $color--white;
       padding: 4em 0;
-      margin: 0 10px;
     }
 
     .Philosophy_entry{
       margin-bottom: 2.5em;
+      width: auto;
+      //margin: 0 2%;
     }
     
     // アイコンとタイトル
-    .Philosophy_title p{
+    .Philosophy_title{
       display: block;
+      justify-content: center;  /* アイテムを中央に寄せる */
       margin-block-start: 1em;
       margin-block-end: 1em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       text-align: center;
       margin: .2em 0 0;
-      font-weight: 700;
       font-size: 2.4rem;
+      p{
+        font-weight: 700;
+      }
     }
 
     // アイコン
@@ -118,10 +136,12 @@
 
     // 説明文
     .Philosophy_sentence{
-      text-align: center;
-      margin: .5em 0 0;
-      line-height: 1.7;
-      font-weight: 700;
+      text-align: left;
+      p{
+        margin: .5em 0 0;
+        line-height: 1.7;
+        font-weight: 700;
+      }
     }
 
 
