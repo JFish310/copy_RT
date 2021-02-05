@@ -13,11 +13,14 @@
 
 
 /* RTロゴ */
-    .Header p.Header_logo img{
-      height: 30px;
-      width: auto;
-      @include breakpoint (width_1200){
-        height: auto;
+    p.Header_logo{      
+      padding: 0px 10px;
+      img{
+        height: 30px;
+        width: auto;
+        @include breakpoint (width_1200){
+          height: auto;
+        }
       }
     }
 
