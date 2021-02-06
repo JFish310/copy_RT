@@ -56,13 +56,17 @@ a {
 }
 
 /* RTロゴ */
-.Header p.Header_logo img {
+p.Header_logo {
+  padding: 0px 10px;
+}
+
+p.Header_logo img {
   height: 30px;
   width: auto;
 }
 
 @media (min-width: 1200px) {
-  .Header p.Header_logo img {
+  p.Header_logo img {
     height: auto;
   }
 }
@@ -75,8 +79,8 @@ a {
 /* 3枚目の背景画像の設定 */
 .p-Top_Head {
   height: 300px;
+  padding-bottom: 320px;
   position: relative;
-  overflow: hidden;
   background-image: url("../img/bg-hero3.png");
   background-repeat: no-repeat;
   background-position: center -25px;
@@ -92,24 +96,30 @@ a {
   width: 100%;
   height: 100%;
   /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
-  justify-content: center;
-  /* アイテムを中央に寄せる */
-  padding-top: 80px;
-  align-items: flex-end;
-  /* フレックスアイテムを末尾にまとめる */
   background-image: url("../img/bg-hero1.png");
   background-repeat: no-repeat;
   background-position: center -30px;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* アイテムを中央に寄せる */
+  align-items: flex-end;
+  /* フレックスアイテムを末尾にまとめる */
   z-index: 200;
 }
 
-@media (min-width: 768px) {
-  .p-Top_Head_layer1 {
-    max-width: 530px;
-    border-radius: 10px;
-    padding: 43px 40px 19px;
-  }
+.p-Top_Head_layer2 {
+  /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
+  background-image: url("../img/bg-hero2.png");
+  background-repeat: no-repeat;
+  background-position: center -25px;
+  background-size: cover;
+  z-index: 10;
 }
 
 .p-Top_Head_body {
@@ -138,19 +148,6 @@ a {
     display: block;
     height: auto;
   }
-}
-
-.p-Top_Head_layer2 {
-  /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* ↑↑↑↑↑共通レイヤー↑↑↑↑↑ */
-  background-image: url("../img/bg-hero2.png");
-  background-repeat: no-repeat;
-  background-position: center -25px;
-  background-size: cover;
 }
 
 .c-wrap {
