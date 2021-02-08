@@ -45,20 +45,27 @@
 
   /*マンガでわかるボタン*/
   p.c-btn-first{
-    padding: 12px 18px;
     width: auto;          /*幅*/
     height: auto;         /*高さ*/
-    margin: 0 10px 1em 5px;
-    display: inline-block;    
+    padding: 12px 18px;
+    //margin: 0 10px 1em 5px;
     border-radius: 4px; // 四隅を丸く
     font-weight: 700;   // フォントの太さ
-    line-height: 1;
+
     background-color: $color--deep-blue;
+    border-color: $color--deep-blue;
+
+    line-height: 1; // 行間（行高）
+    display: inline-block;
+
     border: solid 1px #c3c3c3;
     margin: 1.3em 0 .5em;
+    
     a{
-      color: $color--white;
       font-size: 1.6rem;
+      // background-color: $color--deep-blue;
+      // border-color: $color--deep-blue;
+      color: $color--white;
     }
   }
 

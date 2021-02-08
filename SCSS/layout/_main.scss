@@ -64,24 +64,23 @@
       background-repeat: no-repeat;
       background-position: center -25px;  // x=真ん中, y=-25px
       background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
-      z-index: 10;
+      //z-index: 10;
 
     }
-
-
 
     .p-Top_Head_body{
       width: 100%;
       max-width: 100%;
-      padding: 9px 0 13px;
+      padding: 9px 0 13px;  // 上、左右、下
       border-radius: 0; //四隅
       background-color: $color--white;
       text-align: center;
+
       /* 「はじめまして」の文章のところ */
       p{
         color: $color--sentence-black;
-        font-size: 1.3rem;
         margin: .5em 0;
+        font-size: 1.3rem;
         font-weight: 700;   // フォントの太さ
         }
       // 「はじめまして」上のRTロゴ
@@ -96,7 +95,8 @@
 
     .c-wrap{
       margin: 0 10px;
-      max-width: 1078px;
+      max-width: 100%;
+      background-color: $color--black;
     }
     // 理念
     .p-Philosophy{
@@ -112,7 +112,7 @@
     .Philosophy_entry{
       margin-bottom: 2.5em;
       width: auto;
-      //margin: 0 2%;
+      margin: 0 2%;
     }
     
     // アイコンとタイトル
