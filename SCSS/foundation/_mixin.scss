@@ -11,8 +11,8 @@
       }
     }
 
-    @if $breakpoint == width_768{
-      @media( min-width: 768px ){
+    @if $breakpoint == width_767{
+      @media( min-width: 767px ){
         @content;
       }
     }

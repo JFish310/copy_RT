@@ -43,7 +43,7 @@
     transition: transform .2s;
   }
 
-  /*マンガでわかるボタン*/
+  /* マンガでわかるボタン */
   p.c-btn-first{
     width: auto;          /*幅*/
     height: auto;         /*高さ*/
@@ -60,12 +60,19 @@
 
     border: solid 1px #c3c3c3;
     margin: 1.3em 0 .5em;
+
+    @include breakpoint( width_767 ){
+      padding: 24px 37px;
+    }
     
     a{
       font-size: 1.6rem;
       // background-color: $color--deep-blue;
       // border-color: $color--deep-blue;
       color: $color--white;
+      @include breakpoint( width_767 ){
+        font-size: 1.8rem;
+      }
     }
   }
 

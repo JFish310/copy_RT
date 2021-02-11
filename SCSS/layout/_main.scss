@@ -14,7 +14,12 @@
       background-repeat: no-repeat;
       background-position: center -25px;  // x=真ん中, y=-25pxなので上に25pxずれる
       background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
-      background-attachment: fixed; // 背景はビューポートに対する相対位置で固定される
+      background-attachment: fixed; // 背景はビューポートに対する相対位置で固定
+
+      @include breakpoint( width_767 ){
+        height: 650px;
+        background-position: 50% 50%;
+      }
     }
     
     /* 最初の説明文全体のところ */
@@ -32,23 +37,27 @@
       background-position: center -30px;  // x=真ん中, y=-30px
       background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
 
+      @include breakpoint( width_767 ){
+        height: 650px;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-attachment: scroll;
+        padding-top: 80px;  // 本家には設定してあるけど影響なさそう
+      }
+
       // これを有効にすることで、白背景の部分が下に下がった
       display: flex;  // その直下の要素が並列になるスタイル
       justify-content: center;  /* アイテムを中央に寄せる */
 
-      // 本家には設定してあるけど影響なさそう
-      //padding-top: 80px;
-
       // フレックスアイテム=白背景部分
       align-items: flex-end;  /* フレックスアイテムを末尾にまとめる */
+      @include breakpoint( width_767 ){
+        // フレックスアイテム=白背景部分
+        align-items: flex-start;  /* フレックスアイテムを先頭にまとめる */
+      }
 
       z-index: 200;
-      
-      // @include breakpoint( width_768 ){
-      //   max-width: 530px;
-      //   border-radius: 10px;
-      //   padding: 43px 40px 19px;
-      // }
+
     }
     
     .p-Top_Head_layer2{
@@ -64,6 +73,13 @@
       background-repeat: no-repeat;
       background-position: center -25px;  // x=真ん中, y=-25px
       background-size: cover; // 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する
+
+      @include breakpoint( width_767 ){
+        background-position: 50% 50%;
+        background-size: auto;
+        background-attachment: scroll;
+      }
+      
       //z-index: 10;
 
     }
@@ -76,18 +92,35 @@
       background-color: $color--white;
       text-align: center;
 
+      // レスポンシブ対応
+      @include breakpoint( width_767 ){
+        max-width: 530px;
+        padding: 43px 40px 19px;  // 上、左右、下
+        border-radius: 10px;  //四隅
+      }
+
       /* 「はじめまして」の文章のところ */
       p{
         color: $color--sentence-black;
         margin: .5em 0;
         font-size: 1.3rem;
         font-weight: 700;   // フォントの太さ
+        @include breakpoint( width_767 ){
+          margin: 1.3em 0 .5em;
+          font-size: 1.6rem;
+          font-weight: 700;   // フォントの太さ
+          line-height: 1.7;   // 行の高さ
         }
+      }
+
       // 「はじめまして」上のRTロゴ
       img{
         display: none;
-        @include breakpoint( width_768 ){
+        @include breakpoint( width_767 ){
+          width: 280px;
+          height: auto;
           display: block;
+          margin: auto;
           height: auto;
         }
       }
@@ -107,12 +140,24 @@
       background-color: $color--black;
       color: $color--white;
       padding: 4em 0;
+
+      // レスポンシブ対応
+      @include breakpoint( width_767 ){
+        position: relative;
+        margin-top: -263px;
+        flex-direction: row;
+        z-index: 500;
+      }
     }
 
     .Philosophy_entry{
       margin-bottom: 2.5em;
       width: auto;
       margin: 0 2%;
+
+      @include breakpoint( width_767 ){
+        width: 29.33%;
+      }
     }
     
     // アイコンとタイトル
