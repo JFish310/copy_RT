@@ -88,6 +88,13 @@ p.Header_logo img {
   background-attachment: fixed;
 }
 
+@media (min-width: 767px) {
+  .p-Top_Head {
+    height: 650px;
+    background-position: 50% 50%;
+  }
+}
+
 /* 最初の説明文全体のところ */
 .p-Top_Head_layer1 {
   /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
@@ -108,6 +115,23 @@ p.Header_logo img {
   z-index: 200;
 }
 
+@media (min-width: 767px) {
+  .p-Top_Head_layer1 {
+    height: 650px;
+    background-position: 50% 50%;
+    background-size: auto;
+    background-attachment: scroll;
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 767px) {
+  .p-Top_Head_layer1 {
+    align-items: flex-start;
+    /* フレックスアイテムを先頭にまとめる */
+  }
+}
+
 .p-Top_Head_layer2 {
   /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
   position: absolute;
@@ -121,6 +145,14 @@ p.Header_logo img {
   background-size: cover;
 }
 
+@media (min-width: 767px) {
+  .p-Top_Head_layer2 {
+    background-position: 50% 50%;
+    background-size: auto;
+    background-attachment: scroll;
+  }
+}
+
 .p-Top_Head_body {
   width: 100%;
   max-width: 100%;
@@ -131,6 +163,14 @@ p.Header_logo img {
   /* 「はじめまして」の文章のところ */
 }
 
+@media (min-width: 767px) {
+  .p-Top_Head_body {
+    max-width: 530px;
+    padding: 43px 40px 19px;
+    border-radius: 10px;
+  }
+}
+
 .p-Top_Head_body p {
   color: #121212;
   margin: .5em 0;
@@ -138,13 +178,25 @@ p.Header_logo img {
   font-weight: 700;
 }
 
+@media (min-width: 767px) {
+  .p-Top_Head_body p {
+    margin: 1.3em 0 .5em;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+}
+
 .p-Top_Head_body img {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .p-Top_Head_body img {
+    width: 280px;
+    height: auto;
     display: block;
+    margin: auto;
     height: auto;
   }
 }
@@ -165,10 +217,25 @@ p.Header_logo img {
   padding: 4em 0;
 }
 
+@media (min-width: 767px) {
+  .p-Philosophy {
+    position: relative;
+    margin-top: -263px;
+    flex-direction: row;
+    z-index: 500;
+  }
+}
+
 .Philosophy_entry {
   margin-bottom: 2.5em;
   width: auto;
   margin: 0 2%;
+}
+
+@media (min-width: 767px) {
+  .Philosophy_entry {
+    width: 29.33%;
+  }
 }
 
 .Philosophy_title {
@@ -274,7 +341,7 @@ p.Header_logo img {
   transition: transform .2s;
 }
 
-/*マンガでわかるボタン*/
+/* マンガでわかるボタン */
 p.c-btn-first {
   width: auto;
   /*幅*/
@@ -291,8 +358,20 @@ p.c-btn-first {
   margin: 1.3em 0 .5em;
 }
 
+@media (min-width: 767px) {
+  p.c-btn-first {
+    padding: 24px 37px;
+  }
+}
+
 p.c-btn-first a {
   font-size: 1.6rem;
   color: #FFFFFF;
+}
+
+@media (min-width: 767px) {
+  p.c-btn-first a {
+    font-size: 1.8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
