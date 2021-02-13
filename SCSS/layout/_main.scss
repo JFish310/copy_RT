@@ -94,6 +94,7 @@
 
       // レスポンシブ対応
       @include breakpoint( width_767 ){
+        width: auto;
         max-width: 530px;
         padding: 43px 40px 19px;  // 上、左右、下
         border-radius: 10px;  //四隅
@@ -110,6 +111,7 @@
           font-size: 1.6rem;
           font-weight: 700;   // フォントの太さ
           line-height: 1.7;   // 行の高さ
+          text-size-adjust: 100%;
         }
       }
 
@@ -146,7 +148,6 @@
         position: relative;
         margin-top: -263px;
         flex-direction: row;
-        z-index: 500;
       }
     }
 

@@ -165,6 +165,7 @@ p.Header_logo img {
 
 @media (min-width: 767px) {
   .p-Top_Head_body {
+    width: auto;
     max-width: 530px;
     padding: 43px 40px 19px;
     border-radius: 10px;
@@ -184,6 +185,7 @@ p.Header_logo img {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.7;
+    text-size-adjust: 100%;
   }
 }
 
@@ -222,7 +224,6 @@ p.Header_logo img {
     position: relative;
     margin-top: -263px;
     flex-direction: row;
-    z-index: 500;
   }
 }
 

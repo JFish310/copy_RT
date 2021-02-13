@@ -71,6 +71,7 @@
       // border-color: $color--deep-blue;
       color: $color--white;
       @include breakpoint( width_767 ){
+        //padding: 24px 37px;
         font-size: 1.8rem;
       }
     }
