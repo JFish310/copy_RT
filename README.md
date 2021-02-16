@@ -21,3 +21,5 @@ max-widthが530pxだから、めいっぱいの530pxになっていたという�
 
 2/14 メモ
 1.wrapの調整→paddingとmargin設定に解決策アリ
+
+2/15～　 Git/mysite練習
