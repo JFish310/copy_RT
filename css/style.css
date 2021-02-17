@@ -203,7 +203,7 @@ p.Header_logo img {
   }
 }
 
-.c-wrap {
+.l-wrap {
   margin: 0 10px;
   max-width: 100%;
   background-color: #000000;
@@ -214,7 +214,6 @@ p.Header_logo img {
   flex-direction: column;
   /* 積み重なるように配置する */
   align-items: center;
-  background-color: #000000;
   color: #FFFFFF;
   padding: 4em 0;
 }
