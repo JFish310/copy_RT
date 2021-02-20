@@ -1,5 +1,5 @@
   /* ハンバーガーメニューボタン */
-  .c-btn{
+  .c-button{
     display: block;       /*ブロックレベルで表示*/
     width: 50px;          /*幅*/
     height: 50px;         /*高さ*/
@@ -30,21 +30,21 @@
   }
 
   /* ボタンをクローズ */
-  .c-btn.close .bar_top{
+  .c-button.close .bar_top{
     transform: translate(-50%, 10px) rotate(135deg);
     transition: transform .2s;
   }
-  .c-btn.close .bar_mid{
+  .c-button.close .bar_mid{
     opacity: 0;
     transition: opacity .2s;
   }
-  .c-btn.close .bar_bottom{
+  .c-button.close .bar_bottom{
     transform: translate( -50%, -8px) rotate(-135deg);
     transition: transform .2s;
   }
 
   /* マンガでわかるボタン */
-  p.c-btn-first{
+  p.c-button-first{
     width: auto;          /*幅*/
     height: auto;         /*高さ*/
     padding: 12px 18px;
