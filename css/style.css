@@ -283,7 +283,7 @@ p.Header_logo img {
 
 /*  */
 /* ハンバーガーメニューボタン */
-.c-btn {
+.c-button {
   display: block;
   /*ブロックレベルで表示*/
   width: 50px;
@@ -326,23 +326,23 @@ p.Header_logo img {
 }
 
 /* ボタンをクローズ */
-.c-btn.close .bar_top {
+.c-button.close .bar_top {
   transform: translate(-50%, 10px) rotate(135deg);
   transition: transform .2s;
 }
 
-.c-btn.close .bar_mid {
+.c-button.close .bar_mid {
   opacity: 0;
   transition: opacity .2s;
 }
 
-.c-btn.close .bar_bottom {
+.c-button.close .bar_bottom {
   transform: translate(-50%, -8px) rotate(-135deg);
   transition: transform .2s;
 }
 
 /* マンガでわかるボタン */
-p.c-btn-first {
+p.c-button-first {
   width: auto;
   /*幅*/
   height: auto;
@@ -359,18 +359,18 @@ p.c-btn-first {
 }
 
 @media (min-width: 767px) {
-  p.c-btn-first {
+  p.c-button-first {
     padding: 24px 37px;
   }
 }
 
-p.c-btn-first a {
+p.c-button-first a {
   font-size: 1.6rem;
   color: #FFFFFF;
 }
 
 @media (min-width: 767px) {
-  p.c-btn-first a {
+  p.c-button-first a {
     font-size: 1.8rem;
   }
 }
