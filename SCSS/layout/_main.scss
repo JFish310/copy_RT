@@ -1,9 +1,9 @@
-    .Main{
+    .p-main{
       padding-top: 50px;
     }
     
     /* 3枚目の背景画像の設定 */
-    .p-Top_Head{
+    .p-top-head{
       height: 300px;  // 高さ
       // このpaddingを設定することで、背景画像が少しズームされるように見える
       padding-bottom: 320px;  
@@ -23,7 +23,7 @@
     }
     
     /* 最初の説明文全体のところ */
-    .p-Top_Head_layer1{
+    .p-top-head__layer1{
       /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
       position: absolute;
       top: 0;
@@ -60,7 +60,7 @@
 
     }
     
-    .p-Top_Head_layer2{
+    .p-top-head__layer2{
       /* ↓↓↓↓↓共通レイヤー↓↓↓↓↓ */
       position: absolute;
       top: 0;
@@ -84,7 +84,7 @@
 
     }
 
-    .p-Top_Head_body{
+    .p-top-head__body{
       width: 100%;
       max-width: 100%;
       padding: 9px 0 13px;  // 上、左右、下
@@ -129,18 +129,21 @@
     }
 
     .l-wrap{
-      margin: 0 10px;
+      //margin: 0 10px;
       max-width: 100%;
       background-color: $color--black;
     }
+
     // 理念
-    .p-Philosophy{
+    .p-philosophy{
+      margin: 0 10px;
       margin-top: 0;
       flex-direction: column; /* 積み重なるように配置する */
       align-items: center;
 
       //background-color: $color--black;
       color: $color--white;
+      font-weight: 700;
       padding: 4em 0;
 
       // レスポンシブ対応
@@ -151,34 +154,19 @@
       }
     }
 
-    .Philosophy_entry{
+    .p-philosophy__entry{
+      margin: 0 2%;
       margin-bottom: 2.5em;
       width: auto;
-      margin: 0 2%;
+      
 
       @include breakpoint( width_767 ){
         width: 29.33%;
       }
     }
-    
-    // アイコンとタイトル
-    .Philosophy_title{
-      display: block;
-      justify-content: center;  /* アイテムを中央に寄せる */
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      text-align: center;
-      margin: .2em 0 0;
-      font-size: 2.4rem;
-      p{
-        font-weight: 700;
-      }
-    }
 
     // アイコン
-    .Philosophy_icon{
+    .p-philosophy__icon{
       display: flex;
       // -webkit-box-pack: center;  // Google Chrome、Safari向け
       justify-content: center;  /* アイテムを中央に寄せる */
@@ -193,14 +181,26 @@
       font-size: 100px;
     }
 
+    // タイトル
+    .p-philosophy__title{
+      margin: .2em 0 0;
+      font-size: 2.4rem;
+
+      display: block;
+      justify-content: center;  /* アイテムを中央に寄せる */
+      // margin-block-start: 1em;
+      // margin-block-end: 1em;
+      // margin-inline-start: 0px;
+      // margin-inline-end: 0px;
+      text-align: center;
+    }
+
     // 説明文
-    .Philosophy_sentence{
+    .p-philosophy__sentence{
       text-align: left;
-      p{
-        margin: .5em 0 0;
-        line-height: 1.7;
-        font-weight: 700;
-      }
+      margin: .5em 0 0;
+      line-height: 1.7;
+      font-weight: 700;
     }
 
 
