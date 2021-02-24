@@ -213,17 +213,18 @@ p.Header_logo img {
   margin-top: 0;
   flex-direction: column;
   /* 積み重なるように配置する */
-  align-items: center;
   color: #FFFFFF;
   font-weight: 700;
-  padding: 4em 0;
+  padding: 4em 0 0;
 }
 
 @media (min-width: 767px) {
   .p-philosophy {
     position: relative;
+    display: flex;
     margin-top: -263px;
     flex-direction: row;
+    z-index: 500;
   }
 }
 
