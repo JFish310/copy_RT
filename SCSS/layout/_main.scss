@@ -139,18 +139,20 @@
       margin: 0 10px;
       margin-top: 0;
       flex-direction: column; /* 積み重なるように配置する */
-      align-items: center;
+      //align-items: center;//がたつき制御のためコメントアウト
 
       //background-color: $color--black;
       color: $color--white;
       font-weight: 700;
-      padding: 4em 0;
+      padding: 4em 0 0;
 
       // レスポンシブ対応
       @include breakpoint( width_767 ){
         position: relative;
+        display: flex;  // 並列
         margin-top: -263px;
         flex-direction: row;
+        z-index: 500;
       }
     }
 
@@ -158,7 +160,6 @@
       margin: 0 2%;
       margin-bottom: 2.5em;
       width: auto;
-      
 
       @include breakpoint( width_767 ){
         width: 29.33%;
