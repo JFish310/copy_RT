@@ -213,6 +213,9 @@ p.Header_logo img {
   margin-top: 0;
   flex-direction: column;
   /* 積み重なるように配置する */
+  align-items: center;
+  justify-content: center;
+  /* アイテムを中央に寄せる */
   color: #FFFFFF;
   font-weight: 700;
   padding: 4em 0 0;
@@ -237,6 +240,13 @@ p.Header_logo img {
 @media (min-width: 767px) {
   .p-philosophy__entry {
     width: 29.33%;
+  }
+}
+
+@media (min-width: 1078px) {
+  .p-philosophy__entry {
+    margin: 0 50px;
+    width: 229px;
   }
 }
 
@@ -266,7 +276,8 @@ p.Header_logo img {
 }
 
 .p-philosophy__sentence {
-  text-align: left;
+  justify-content: center;
+  /* アイテムを中央に寄せる */
   margin: .5em 0 0;
   line-height: 1.7;
   font-weight: 700;
