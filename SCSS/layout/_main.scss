@@ -149,6 +149,7 @@
       color: $color--white;
       font-weight: 700;
       padding: 4em 0 0;
+      //padding: 4em 0;
 
       // レスポンシブ対応
       @include breakpoint( width_767 ){
@@ -167,6 +168,11 @@
 
       @include breakpoint( width_767 ){
         width: 29.33%;
+      }
+
+      @include breakpoint( width_1078 ){
+        margin: 0 50px;
+        width: 229px;
       }
     }
 
@@ -202,7 +208,7 @@
 
     // 説明文
     .p-philosophy__sentence{
-      text-align: left;
+      justify-content: center;  /* アイテムを中央に寄せる */
       margin: .5em 0 0;
       line-height: 1.7;
       font-weight: 700;
