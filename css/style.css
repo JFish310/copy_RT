@@ -211,11 +211,10 @@ p.Header_logo img {
 .p-philosophy {
   margin: 0 10px;
   margin-top: 0;
-  flex-direction: column;
-  /* 積み重なるように配置する */
+  display: flex;
+  flex-direction: column;/* 積み重なるように配置する */
   align-items: center;
-  justify-content: center;
-  /* アイテムを中央に寄せる */
+  justify-content: center;/* アイテムを中央に寄せる */
   color: #FFFFFF;
   font-weight: 700;
   padding: 4em 0 0;
