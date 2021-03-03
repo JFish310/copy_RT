@@ -38,3 +38,6 @@ p-philosophyのセンタリングがうまくいかない
 2/27 _main.scss は一旦完了。
 
 3/1～ headerレスポンシブ・リファクタリング開始
+
+3/2 vertical-align: bottom;を加えることで、aタグとimgのズレを解消
+
