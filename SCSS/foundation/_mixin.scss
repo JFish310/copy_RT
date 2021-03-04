@@ -1,6 +1,6 @@
 @mixin breakpoint( $breakpoint ) {
-    @if $breakpoint == width_1200{
-      @media ( min-width : 1200px ){
+    @if $breakpoint == width_1201{
+      @media ( min-width : 1201px ){
         @content;
       }
     }

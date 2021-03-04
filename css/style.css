@@ -46,8 +46,10 @@ a {
 /* ヘッダー全般 */
 .p-header {
   width: 100%;
+  align-items: center;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   background-color: #FFFFFF;
   z-index: 1100;
   position: fixed;
@@ -61,46 +63,57 @@ a {
 }
 
 /* RTロゴ */
-.p-header__logo {
+.p-header__title {
   margin: 10px;
 }
 
-@media (min-width: 1200px) {
-  .p-header__logo {
+.p-header__title span {
+  display: none;
+}
+
+@media (min-width: 1201px) {
+  .p-header__title {
     margin: 0 0 0 21px;
     height: 70px;
   }
 }
 
-.p-header__logo p {
+.p-header__title p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.p-header__logo a {
+.p-header__title a {
   height: 30px;
   line-height: 1.3;
 }
 
-@media (min-width: 1200px) {
-  .p-header__logo a {
+@media (min-width: 1201px) {
+  .p-header__title a {
     height: 70px;
   }
 }
 
-.p-header__logo img {
+.p-header__title img {
   height: 30px;
   width: auto;
   vertical-align: bottom;
 }
 
-@media (min-width: 1200px) {
-  .p-header__logo img {
+@media (min-width: 1201px) {
+  .p-header__title img {
     height: auto;
+    display: block;
   }
 }
 
 /* ハンバーガーメニューボタン */
+@media (min-width: 1201px) {
+  .c-button span {
+    display: none;
+  }
+}
+
 .p-main {
   padding-top: 50px;
 }
