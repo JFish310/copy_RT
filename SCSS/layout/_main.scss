@@ -1,5 +1,8 @@
     .p-main{
       padding-top: 50px;
+      @include breakpoint( width_1200 ){
+        padding-top: 70px;
+      }
     }
     
     /* 3枚目の背景画像の設定 */
