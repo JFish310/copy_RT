@@ -41,3 +41,5 @@ p-philosophyのセンタリングがうまくいかない
 
 3/2 vertical-align: bottom;を加えることで、aタグとimgのズレを解消
 
+3/5 spanをaタグ内に移動。本家のタグstatus確認
+
