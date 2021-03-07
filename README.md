@@ -43,3 +43,4 @@ p-philosophyのセンタリングがうまくいかない
 
 3/5 spanをaタグ内に移動。本家のタグstatus確認
 
+3/7～ strongの部分の修正
