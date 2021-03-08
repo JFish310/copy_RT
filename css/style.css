@@ -73,24 +73,37 @@ a {
   }
 }
 
-.p-header__title p {
-  margin-bottom: 0;
-}
-
 .p-header__title a {
   height: 30px;
   line-height: 1.3;
+  display: flex;
+  color: #131d34;
 }
 
 @media (min-width: 1201px) {
   .p-header__title a {
     height: 70px;
-    display: flex;
+    font-weight: 900;
+    align-items: center;
+    line-height: 1.3;
   }
 }
 
 .p-header__title a span {
   display: none;
+}
+
+@media (min-width: 1281px) {
+  .p-header__title a span {
+    display: flex;
+    margin-left: 16px;
+    white-space: nowrap;
+    font-size: 1.4rem;
+  }
+  .p-header__title a span strong {
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
 }
 
 .p-header__title img {

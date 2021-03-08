@@ -5,8 +5,8 @@
       }
     }
 
-    @if $breakpoint == width_1280{
-      @media ( min-width : 1280px ){
+    @if $breakpoint == width_1281{
+      @media ( min-width : 1281px ){
         @content;
       }
     }
