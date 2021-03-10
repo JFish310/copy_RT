@@ -95,14 +95,13 @@ a {
 
 @media (min-width: 1281px) {
   .p-header__title a span {
-    display: flex;
+    display: block;
     margin-left: 16px;
     white-space: nowrap;
     font-size: 1.4rem;
   }
   .p-header__title a span strong {
     font-size: 1.8rem;
-    font-weight: bolder;
   }
 }
 
@@ -128,6 +127,12 @@ a {
 
 .p-main {
   padding-top: 50px;
+}
+
+@media (min-width: 1201px) {
+  .p-main {
+    padding-top: 70px;
+  }
 }
 
 /* 3枚目の背景画像の設定 */

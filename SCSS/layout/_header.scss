@@ -43,22 +43,22 @@
         height: 70px;
         font-weight: 900;
         //align-content: center;
-        align-items: center;
+        align-items: center;// spanタグの中央寄せ
         line-height: 1.3;
       }
       span{
-        display: none;
+        display: none;  // 非表示
         @include breakpoint (width_1281){
-          display: flex;
+          display: block;  // 表示させる
+          //vertical-align: bottom;
           margin-left: 16px;
           white-space: nowrap;  // ソース中のホワイトスペースを無視
           font-size: 1.4rem;
           strong{
             font-size: 1.8rem;  // 少し大きく設定
-            font-weight: bolder;// 太字
+            //font-weight: bolder;// 太字
 
           }
-          
         }
       }
     }
