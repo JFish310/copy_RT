@@ -14,7 +14,7 @@
     position: absolute;           /*絶対位置*/
     left: 50%;      
     transform: translateX(-50%);  /*X方向の子要素の半分戻る*/
-    background-color: $color--blue;
+    background-color: $color--deep-blue;
   }
 
   /* 三本線のマージン指定 */
@@ -31,7 +31,7 @@
 
   /* ボタンをクローズ */
   .c-button.close .bar_top{
-    transform: translate(-50%, 10px) rotate(135deg);
+    transform: translate(-50%, 10px) rotate(-45deg); // rotate：時計回り
     transition: transform .2s;
   }
   .c-button.close .bar_mid{
@@ -42,6 +42,69 @@
     transform: translate( -50%, -8px) rotate(-135deg);
     transition: transform .2s;
   }
+  .c-button.close{
+    background-color: $color--deep-blue;
+    .bar{
+      background-color: $color--white;
+    }
+  }
+
+  /* アコーディオンメニュー全体のサイズ・位置 */
+  .p-gnavi {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* クリック領域 */
+  .p-gnavi__main {
+    position: relative;  /* 追加 */
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    background-color: #f97148;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    //プラスの横線
+    &:before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      transform: translateY(-50%);
+    }
+    //プラス縦線
+    &:after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      /* 8px+12px-1px(幅2pxの半分) */
+      right: 19px;
+      width: 2px;
+      height: 24px;
+      background: #fff;
+      transform: translateY(-50%);
+      transition: .3s;
+    }
+  }
+  
+  /* クリックしたら表示される領域 */
+  .p-gnavi__sub {
+    display: none;
+    padding: 2em 1em;
+    background-color: #ffccbc;
+    text-align: center;
+  }
+
+
+
+
+
+
 
   /* マンガでわかるボタン */
   p.c-button-first{
@@ -76,4 +139,3 @@
       }
     }
   }
-

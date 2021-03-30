@@ -1,5 +1,5 @@
   /* ヘッダー全般 */
-  .p-header{
+  .l-header{
     width: 100%;
     align-items: center;
     display: flex;
@@ -22,7 +22,7 @@
 
 /* RTロゴ */
 
-  .p-header__title{
+  .l-header__title{
     margin: 10px;
     
     @include breakpoint (width_1201){
@@ -80,8 +80,11 @@
         display: none;
       }
     }
-  }  
-  
+  }
 
-
-  
+  .p-gnavi{
+    display: none;
+    @include breakpoint (width_1201){
+      display: initial;
+    }
+  }
