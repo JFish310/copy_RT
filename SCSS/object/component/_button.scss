@@ -58,14 +58,16 @@
   
   /* クリック領域 */
   .p-gnavi__main {
-    position: relative;  /* 追加 */
-    height: 50px;
-    border-bottom: 1px solid #fff;
-    background-color: #f97148;
-    color: #fff;
+    display: flex;
+    position: relative;  /* 追加 */    
+
+    //height: 50px;
+    border-bottom: 1px solid $color--white;
+    background-color: $color--white;
+    color: $color--sentence-black;
     text-align: center;
     line-height: 50px;
-    cursor: pointer;
+    cursor: pointer;  /*リンクカーソル*/
     //プラスの横線
     &:before{
       content: "";
@@ -95,9 +97,23 @@
   /* クリックしたら表示される領域 */
   .p-gnavi__sub {
     display: none;
-    padding: 2em 1em;
-    background-color: #ffccbc;
-    text-align: center;
+    color: $color--sentence-black;
+    font-weight: 400;
+    background: $color--blue;
+    line-height: 50px;
+    // padding: 2em 1em;
+    // background-color: #ffccbc;
+    // text-align: center;
+    @include breakpoint ( width_1201 ){
+      position: absolute;
+    }
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 2em 1em;
+
+    }
   }
 
 
