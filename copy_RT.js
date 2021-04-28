@@ -3,31 +3,89 @@
 //     $('.p-gnavi__main').fadeToggle( 500 );    // 
 //   });
 
+// $('.c-button').on('click',function(){     // クリックすると
+//   $('.c-button').toggleClass('close');    // closeというclassを付与(ボタンのアニメーション)
+//   $('.p-gnavi').fadeToggle( 200 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
+// });
+
+
 $('.c-button').on('click',function(){     // クリックすると
   $('.c-button').toggleClass('close');    // closeというclassを付与(ボタンのアニメーション)
-  $('.p-gnavi__main').fadeToggle( 500 );  // .p-gnavi__mainが0.5秒でフェードイン(メニューのフェードイン)
+  $('.p-gnavi').slideToggle( 200 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
 });
+
+
+
+
+
+
+
+
+
 
 $('.c-button.close').on('click',function(){     // クリックすると
   $('.c-button.close').toggleClass('.c-button');    // closeというclassを付与(ボタンのアニメーション)
-  $('.p-gnavi__main').fadeToggle( 500 );        // .p-gnavi__mainが0.5秒でフェードアウト(メニューのフェードアウト)
+  $('.p-gnavi').fadeToggle( 200 );        // .p-gnavが0.5秒でフェードアウト(メニューのフェードアウト)
 });
 
-// $(function () {
-//   $('p-gnavi__main').on('click', function() { // クリックすると
-//     $( this ).next().slideToggle();
-//   });
+
+// $('.c-button').on('click', function(){
+//   $('.p-gnavi').slideToggle('p-gnavi');
+//   if ($(this).hasClass('.c-button.close')){
+//     $(this).removeClass('.c-button.close');
+//   }
+//   else {
+//   $(this).addClass('.c-button.close');
+//   }
+// });
+
+
+// $('.ham-btn').click(function(){
+//   $(this).toggleClass('active');
+//   $('.h-nav').slideToggle(230);
+// });  
+
+
+// $('#ham').on('click', function(){
+//   $('#navi').slideToggle('p-gnavi-ham');
+//   if ($(this).hasClass('c-navi_toggle-close')){
+//     $(this).removeClass('c-navi_toggle-close');
+// } else {
+//     $(this).addClass('c-navi_toggle-close');
+// }
 // });
 
 $(function () {
-  $('.p-gnavi__main').on('click', function () {
-    $(this).next().slideToggle();
+  $('.p-gnavi__main-list').hover( function () {
+
+    $(this).children('.p-gnavi__sub').slideToggle();
+
     //openクラスをつける
     $(this).toggleClass("open");
-    //クリックされていないp-gnavi__mainのopenクラスを取る
-    $('.p-gnavi__main').not(this).removeClass('open');
+
+    //ホバーされていないp-gnavi__main-listのopenクラスを取る
+    $('.p-gnavi__main-list').not(this).removeClass('open');
 
     // 一つ開くと他は閉じるように
-    $('.p-gnavi__main').not($(this)).next('.p-gnavi__sub').slideUp();
+    $('.p-gnavi__main-list').not($(this)).children('.p-gnavi__sub').slideUp();
   });
 });
+
+
+
+
+
+
+
+// $(function () {
+//   $('.p-gnavi__main').on('click', function () {
+//     $(this).next().slideToggle();
+//     //openクラスをつける
+//     $(this).toggleClass("open");
+//     //クリックされていないp-gnavi__mainのopenクラスを取る
+//     $('.p-gnavi__main').not(this).removeClass('open');
+
+//     // 一つ開くと他は閉じるように
+//     $('.p-gnavi__main').not($(this)).next('.p-gnavi__sub').slideUp();
+//   });
+// });

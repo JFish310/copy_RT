@@ -428,56 +428,56 @@ a {
 }
 
 /* アコーディオンメニュー全体のサイズ・位置 */
-.p-gnavi {
+.p-gnavi__main {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* クリック領域 */
-.p-gnavi__main {
-  display: flex;
+.p-gnavi__main-list {
   position: relative;
-  /* 追加 */
+  /*相対位置への配置*/
   border-bottom: 1px solid #FFFFFF;
+  /*親と子の間に少し線が入る*/
   background-color: #FFFFFF;
   color: #121212;
-  text-align: center;
-  line-height: 50px;
+  text-align: left;
   cursor: pointer;
+  /*リンクカーソル*/
 }
 
-.p-gnavi__main:before {
+.p-gnavi__main-list:before {
   content: "";
   position: absolute;
-  top: 50%;
-  right: 8px;
+  top: 25px;
+  right: 13px;
   width: 24px;
   height: 2px;
-  background: #fff;
+  background: #121212;
   transform: translateY(-50%);
 }
 
-.p-gnavi__main:after {
+.p-gnavi__main-list:after {
   content: "";
   position: absolute;
-  top: 50%;
-  /* 8px+12px-1px(幅2pxの半分) */
-  right: 19px;
+  top: 25px;
+  right: 24px;
   width: 2px;
   height: 24px;
-  background: #fff;
+  background: #121212;
   transform: translateY(-50%);
   transition: .3s;
 }
 
-/* クリックしたら表示される領域 */
+/* ホバーしたら表示される領域（サブメニュー） */
 .p-gnavi__sub {
   display: none;
   color: #121212;
   font-weight: 400;
-  background: #2bb8d9;
+  background: #FFFFFF;
   line-height: 50px;
+  text-align: left;
 }
 
 @media (min-width: 1201px) {
@@ -490,7 +490,10 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 2em 1em;
+}
+
+.p-gnavi__sub:hover {
+  background-color: #d4f1f8;
 }
 
 /* マンガでわかるボタン */
