@@ -11,15 +11,18 @@
 
 $('.c-button').on('click',function(){     // クリックすると
   $('.c-button').toggleClass('close');    // closeというclassを付与(ボタンのアニメーション)
-  $('.p-gnavi').slideToggle( 200 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
+  $('.p-gnavi').slideToggle( 230 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
 });
 
+// $('.c-button').on('click',function(){     // クリックすると
+//   $(this).toggleClass('close');    // closeというclassを付与(ボタンのアニメーション)
+//   $('.p-gnavi').slideToggle( 230 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
+// });
 
-
-
-
-
-
+// $('.c-button').click(function(){     // クリックすると
+//   $(this).toggleClass('close');    // closeというclassを付与(ボタンのアニメーション)
+//   $('.p-gnavi').slideToggle( 230 );  // .p-gnaviが0.5秒でフェードイン(メニューのフェードイン)
+// });
 
 
 
@@ -56,7 +59,7 @@ $('.c-button.close').on('click',function(){     // クリックすると
 // });
 
 $(function () {
-  $('.p-gnavi__main-list').hover( function () {
+  $('.p-gnavi__main-list').click( function () {
 
     $(this).children('.p-gnavi__sub').slideToggle();
 

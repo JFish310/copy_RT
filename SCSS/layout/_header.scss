@@ -83,6 +83,10 @@
   }
 
   .p-gnavi{
+    // ・を削除
+    li{
+      list-style: none;
+    }
     display: none;
     @include breakpoint (width_1201){
       display: initial;
