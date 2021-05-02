@@ -438,9 +438,16 @@ a {
 
 /* アコーディオンメニュー全体のサイズ・位置 */
 .p-gnavi__main {
+  display: block;
   width: 100%;
-  margin: 0 auto;
   position: fixed;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi__main {
+    display: flex;
+    line-height: 70px;
+  }
 }
 
 .p-gnavi__main a {
@@ -452,17 +459,13 @@ a {
   position: relative;
   /*相対位置への配置*/
   background-color: #FFFFFF;
-  text-align: left;
   line-height: 50px;
   cursor: pointer;
   /*リンクカーソル*/
   /* メインメニューli */
-  /* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
-  /* .p-gnavi__main-list.open > a:after { */
 }
 
 .p-gnavi__main-list > a {
-  display: block;
   font-weight: 700;
   /*太字*/
   padding: 10px;
@@ -495,7 +498,9 @@ a {
   transition: .3s;
 }
 
-.p-gnavi__main-list .p-gnavi__main-list.open:after {
+/* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
+/* .p-gnavi__main-list.open > a:after { */
+.p-gnavi__main-list.open:after {
   top: 25%;
   opacity: 0;
   transform: rotate(90deg);
@@ -508,7 +513,6 @@ a {
   font-weight: 400;
   background: #FFFFFF;
   line-height: 50px;
-  text-align: left;
 }
 
 @media (min-width: 1201px) {
@@ -517,7 +521,7 @@ a {
   }
 }
 
-.p-gnavi__sub > li {
+.p-gnavi__sub > a {
   display: block;
   width: 100%;
   height: 100%;

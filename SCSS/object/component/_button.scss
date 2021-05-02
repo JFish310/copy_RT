@@ -62,10 +62,14 @@
 
   /* アコーディオンメニュー全体のサイズ・位置 */
   .p-gnavi__main {
-    display: flex;
+    display: block;   // メインメニューを縦に並べる
+    @include breakpoint (width_1201){
+      display: flex;  // メインメニューは横並び
+      line-height: 70px;
+    }
     width: 100%;
     //margin: 0 auto;
-    position: relative;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
+    position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
 
     // メニュー内全てに反映される項目
     a{
@@ -85,7 +89,7 @@
 
   /* ホバー領域 */
   .p-gnavi__main-list {
-    //position: relative;                 /*相対位置への配置*/
+    position: relative;                 /*相対位置への配置*/
     background-color: $color--white;
     //text-align: left;
     line-height: 50px;
@@ -101,7 +105,7 @@
 
     /* メインメニューli */
     > a{
-      display: block;
+      //display: block;     //有効にするとホバーは当たるけど、余白が増える
       font-weight: 700;               /*太字*/
       padding: 10px;
 
