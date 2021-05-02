@@ -62,14 +62,15 @@
 
   /* アコーディオンメニュー全体のサイズ・位置 */
   .p-gnavi__main {
+    display: flex;
     width: 100%;
-    margin: 0 auto;
-    position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
+    //margin: 0 auto;
+    position: relative;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
 
     // メニュー内全てに反映される項目
     a{
       color: $color--sentence-black;
-      padding: 10px;
+      //padding: 10px;
     }
 
     //
@@ -84,9 +85,9 @@
 
   /* ホバー領域 */
   .p-gnavi__main-list {
-    position: relative;                 /*相対位置への配置*/
+    //position: relative;                 /*相対位置への配置*/
     background-color: $color--white;
-    text-align: left;
+    //text-align: left;
     line-height: 50px;
     cursor: pointer;  /*リンクカーソル*/
 
@@ -100,63 +101,49 @@
 
     /* メインメニューli */
     > a{
+      display: block;
       font-weight: 700;               /*太字*/
+      padding: 10px;
+
       &:hover {
         background-color: $color--background-color-hover;
       }
 
+      //プラスの横線
+      &:before{
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 13px;
+        width: 24px;
+        height: 2px;
+        background: $color--sentence-black;
+        transform: translateY(-50%);
+        
+      }
+      //プラス縦線
+      &:after{
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 24px;
+        width: 2px;
+        height: 24px;
+        background: $color--sentence-black;
+        transform: translateY(-50%);
+        transition: .3s;
+      }
     }
-    
-
-    //プラスの横線
-    &:before{
-      content: "";
-      position: absolute;
-      top: 25px;
-      right: 13px;
-      width: 24px;
-      height: 2px;
-      background: $color--sentence-black;
-      transform: translateY(-50%);
-      
-    }
-    //プラス縦線
-    &:after{
-      content: "";
-      position: absolute;
-      top: 25px;
-      right: 24px;
-      width: 2px;
-      height: 24px;
-      background: $color--sentence-black;
-      transform: translateY(-50%);
-      transition: .3s;
-    }
-    
-    // //プラスの横線
-    // &:before{
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   right: 8px;
-    //   width: 24px;
-    //   height: 2px;
-    //   background: #fff;
-    //   transform: translateY(-50%);
-    // }
-    // //プラス縦線
-    // &:after{
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   /* 8px+12px-1px(幅2pxの半分) */
-    //   right: 19px;
-    //   width: 2px;
-    //   height: 24px;
-    //   background: #fff;
-    //   transform: translateY(-50%);
-    //   transition: .3s;
   }
+
+    /* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
+    /* .p-gnavi__main-list.open > a:after { */
+    .p-gnavi__main-list.open:after {
+      top: 25%;
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+
   
   /* ホバーしたら表示される領域（サブメニュー） */
   .p-gnavi__sub {
@@ -170,16 +157,18 @@
         position: absolute;
     }
 
-    // 
-    > li {
+    > a{
       display: block;
       width: 100%;
       height: 100%;
       padding: 10px 10px 10px 25px;
       font-weight: 400;
     }
+    // 
+    // > li {
+    // }
       
-    text-align: left;
+    //text-align: left;
     &:hover {
       background-color: $color--background-color-hover;
     }
