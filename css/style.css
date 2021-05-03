@@ -434,19 +434,17 @@ a {
 .p-gnavi {
   top: 50px;
   position: absolute;
+  width: 100%;
 }
 
 /* アコーディオンメニュー全体のサイズ・位置 */
 .p-gnavi__main {
   display: block;
-  width: 100%;
-  position: fixed;
 }
 
 @media (min-width: 1201px) {
   .p-gnavi__main {
     display: flex;
-    line-height: 70px;
   }
 }
 
@@ -456,6 +454,7 @@ a {
 
 /* ホバー領域 */
 .p-gnavi__main-list {
+  display: block;
   position: relative;
   /*相対位置への配置*/
   background-color: #FFFFFF;
@@ -465,10 +464,16 @@ a {
   /* メインメニューli */
 }
 
+@media (min-width: 1201px) {
+  .p-gnavi__main-list {
+    line-height: 70px;
+  }
+}
+
 .p-gnavi__main-list > a {
+  display: block;
   font-weight: 700;
   /*太字*/
-  padding: 10px;
 }
 
 .p-gnavi__main-list > a:hover {

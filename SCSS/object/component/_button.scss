@@ -53,6 +53,7 @@
   .p-gnavi{
     top: 50px;          // 表示位置を指定するために使うもの
     position: absolute; // 絶対配置を指定する値
+    width: 100%;//.p-gnavi__mainから引っ張ってきた
     // ul li a:link{
     //   color: $color--sentence-color;
     //   height: auto;
@@ -62,14 +63,16 @@
 
   /* アコーディオンメニュー全体のサイズ・位置 */
   .p-gnavi__main {
-    display: block;   // メインメニューを縦に並べる
+    display: block;       // メインメニューを縦に並べる
+    //position: relative;   // 
+    //height: 50px;
     @include breakpoint (width_1201){
       display: flex;  // メインメニューは横並び
-      line-height: 70px;
+      //line-height: 70px;
     }
-    width: 100%;
+    // width: 100%;//.p-gnavi（親）に持って行った）
     //margin: 0 auto;
-    position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
+    // position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
 
     // メニュー内全てに反映される項目
     a{
@@ -89,11 +92,16 @@
 
   /* ホバー領域 */
   .p-gnavi__main-list {
+    display: block;       // メインメニューを縦に並べる
     position: relative;                 /*相対位置への配置*/
     background-color: $color--white;
     //text-align: left;
     line-height: 50px;
     cursor: pointer;  /*リンクカーソル*/
+
+    @include breakpoint (width_1201){
+      line-height: 70px;
+    }
 
     // > li{
     //   padding: 10px;
@@ -105,9 +113,9 @@
 
     /* メインメニューli */
     > a{
-      //display: block;     //有効にするとホバーは当たるけど、余白が増える
+      display: block;     //有効にするとホバーは当たるけど、余白が増える
       font-weight: 700;               /*太字*/
-      padding: 10px;
+      //padding: 10px;
 
       &:hover {
         background-color: $color--background-color-hover;
