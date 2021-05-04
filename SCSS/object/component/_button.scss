@@ -54,9 +54,12 @@
 
   /* nav */
   .p-gnavi{
-    top: 50px;          // 表示位置を指定するために使うもの
     position: absolute; // 絶対配置を指定する値
+    top: 50px;          // 表示位置を指定するために使うもの
     width: 100%;        // .p-gnavi__mainから引っ張ってきた
+    @include breakpoint (width_1201){
+      top: auto;
+    }
   }
 
   /* アコーディオンメニュー全体のサイズ・位置 */
@@ -90,10 +93,17 @@
       display: block;     // 有効にするとホバーは当たるけど、余白が増える
       font-weight: 700;   // メインメニューliのみ、太字
       padding: 10px;
+      // 1201px以上だと左右だけpaddingなし
+      @include breakpoint ( width_1201 ){
+        padding: 0 15px;
+      }
 
       &:hover {
         // ホバー時背景色
         background-color: $color--background-color-hover;
+        @include breakpoint ( width_1201 ){
+          background-color: $color--background-color-hover-deep;
+        }
       }
 
       // プラスの横線
@@ -106,6 +116,10 @@
         height: 2px;
         background: $color--sentence-black;
         transform: translateY(-50%);
+        // 1201px以上だと非表示
+        @include breakpoint ( width_1201 ){
+          content: none;
+        }
       }
       // プラス縦線
       &:after{
@@ -118,6 +132,10 @@
         background: $color--sentence-black;
         transform: translateY(-50%);
         transition: .3s;
+        // 1201px以上だと非表示
+        @include breakpoint ( width_1201 ){
+          content: none;
+        }
       }
     }
   }
@@ -137,7 +155,9 @@
     //line-height: 50px;
 
     @include breakpoint ( width_1201 ){
-        position: absolute;
+      position: absolute; // 絶対配置を指定する値
+      background: $color--background-color-hover-sub;
+      //top: 70px;          // 表示位置を指定するために使うもの
     }
 
     // サブメニュー　li
@@ -146,9 +166,20 @@
       // width: 100%;
       // height: 100%;
       padding: 10px 10px 10px 25px;
+      @include breakpoint ( width_1201 ){
+        // display: ; // aタグの周りの余白…？
+        // position: relative;
+        // height: 70px;
+        padding: 15px 60px 15px 15px;
+      }
 
       &:hover {
-        background-color: $color--background-color-hover;
+        // 
+        background: $color--background-color-hover-sub;
+        @include breakpoint ( width_1201 ){
+          color: $color--deep-blue;
+          background: $color--white
+        }
       }
     }
   }

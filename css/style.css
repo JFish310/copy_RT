@@ -434,9 +434,15 @@ a {
 /* 2021.05.04 整頓 開始 */
 /* nav */
 .p-gnavi {
-  top: 50px;
   position: absolute;
+  top: 50px;
   width: 100%;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi {
+    top: auto;
+  }
 }
 
 /* アコーディオンメニュー全体のサイズ・位置 */
@@ -478,8 +484,20 @@ a {
   padding: 10px;
 }
 
+@media (min-width: 1201px) {
+  .p-gnavi__main-list > a {
+    padding: 0 15px;
+  }
+}
+
 .p-gnavi__main-list > a:hover {
   background-color: #f3fafb;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi__main-list > a:hover {
+    background-color: #d4f1f8;
+  }
 }
 
 .p-gnavi__main-list > a:before {
@@ -493,6 +511,12 @@ a {
   transform: translateY(-50%);
 }
 
+@media (min-width: 1201px) {
+  .p-gnavi__main-list > a:before {
+    content: none;
+  }
+}
+
 .p-gnavi__main-list > a:after {
   content: "";
   position: absolute;
@@ -503,6 +527,12 @@ a {
   background: #121212;
   transform: translateY(-50%);
   transition: .3s;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi__main-list > a:after {
+    content: none;
+  }
 }
 
 /* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
@@ -521,6 +551,7 @@ a {
 @media (min-width: 1201px) {
   .p-gnavi__sub {
     position: absolute;
+    background: #e9f8fb;
   }
 }
 
@@ -529,8 +560,21 @@ a {
   padding: 10px 10px 10px 25px;
 }
 
+@media (min-width: 1201px) {
+  .p-gnavi__sub > li a {
+    padding: 15px 60px 15px 15px;
+  }
+}
+
 .p-gnavi__sub > li a:hover {
-  background-color: #f3fafb;
+  background: #e9f8fb;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi__sub > li a:hover {
+    color: #2498b3;
+    background: #FFFFFF;
+  }
 }
 
 /* 2021.05.04 整頓 終了 */
