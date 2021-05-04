@@ -50,78 +50,53 @@
   }
 
 
+  /* 2021.05.04 整頓 開始 */
+
+  /* nav */
   .p-gnavi{
     top: 50px;          // 表示位置を指定するために使うもの
     position: absolute; // 絶対配置を指定する値
-    width: 100%;//.p-gnavi__mainから引っ張ってきた
-    // ul li a:link{
-    //   color: $color--sentence-color;
-    //   height: auto;
-    //   padding: 10px;
-    // }
+    width: 100%;        // .p-gnavi__mainから引っ張ってきた
   }
 
   /* アコーディオンメニュー全体のサイズ・位置 */
+  /* ul */
   .p-gnavi__main {
     display: block;       // メインメニューを縦に並べる
-    //position: relative;   // 
-    //height: 50px;
     @include breakpoint (width_1201){
-      display: flex;  // メインメニューは横並び
-      //line-height: 70px;
+      display: flex;      // メインメニューを横並び
     }
-    // width: 100%;//.p-gnavi（親）に持って行った）
-    //margin: 0 auto;
-    // position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
-
+    
     // メニュー内全てに反映される項目
     a{
-      color: $color--sentence-black;
-      //padding: 10px;
+      color: $color--sentence-black;  // 文字の色
     }
-
-    //
-    // > li{
-    //   padding: 10px;
-    // }
   }
-  
-  // /* クリック領域 */
-  // .p-gnavi__main {
-  //   display: flex;
 
-  /* ホバー領域 */
+  /* メインメニュー li ホバー領域*/
   .p-gnavi__main-list {
     display: block;       // メインメニューを縦に並べる
     position: relative;                 /*相対位置への配置*/
     background-color: $color--white;
-    //text-align: left;
-    line-height: 50px;
+    //line-height: 50px;
     cursor: pointer;  /*リンクカーソル*/
 
     @include breakpoint (width_1201){
       line-height: 70px;
     }
 
-    // > li{
-    //   padding: 10px;
-    // }
-
-    // > a &:hover {
-    //   background-color: $color--background-color-hover;
-    // }
-
-    /* メインメニューli */
+    /* メインメニューli のみ*/
     > a{
-      display: block;     //有効にするとホバーは当たるけど、余白が増える
-      font-weight: 700;               /*太字*/
-      //padding: 10px;
+      display: block;     // 有効にするとホバーは当たるけど、余白が増える
+      font-weight: 700;   // メインメニューliのみ、太字
+      padding: 10px;
 
       &:hover {
+        // ホバー時背景色
         background-color: $color--background-color-hover;
       }
 
-      //プラスの横線
+      // プラスの横線
       &:before{
         content: "";
         position: absolute;
@@ -131,9 +106,8 @@
         height: 2px;
         background: $color--sentence-black;
         transform: translateY(-50%);
-        
       }
-      //プラス縦線
+      // プラス縦線
       &:after{
         content: "";
         position: absolute;
@@ -148,56 +122,190 @@
     }
   }
 
-    /* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
-    /* .p-gnavi__main-list.open > a:after { */
-    .p-gnavi__main-list.open:after {
-      top: 25%;
-      opacity: 0;
-      transform: rotate(90deg);
-    }
-
+  /* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
+  .p-gnavi__main-list.open > a:after {
+    top: 25%;
+    opacity: 0;
+    transform: rotate(90deg);
+  }
   
-  /* ホバーしたら表示される領域（サブメニュー） */
+    
+  /* サブメニュー ul （ホバーしたら表示される領域） */
   .p-gnavi__sub {
     display: none;
-    color: $color--sentence-black;
-    font-weight: 400;
     background: $color--white;
-    line-height: 50px;
+    //line-height: 50px;
 
     @include breakpoint ( width_1201 ){
         position: absolute;
     }
 
-    > a{
+    // サブメニュー　li
+    > li a{
       display: block;
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
       padding: 10px 10px 10px 25px;
-      font-weight: 400;
-    }
-    // 
-    // > li {
-    // }
-      
-    //text-align: left;
-    &:hover {
-      background-color: $color--background-color-hover;
-    }
-    //
-    // padding: 2em 1em;
-    // background-color: #ffccbc;
-    // 
-    // a{
-    //   display: block;
-    //   width: 100%;
-    //   height: 100%;
-    //   padding: 2em 1em;
 
-    // }
+      &:hover {
+        background-color: $color--background-color-hover;
+      }
+    }
   }
 
+  /* 2021.05.04 整頓 終了 */
 
+
+
+  /*---------- 以下、20210504 コメントアウト部開始 ----------*/
+  // .p-gnavi{
+  //   top: 50px;          // 表示位置を指定するために使うもの
+  //   position: absolute; // 絶対配置を指定する値
+  //   width: 100%;//.p-gnavi__mainから引っ張ってきた
+  //   // ul li a:link{
+  //   //   color: $color--sentence-color;
+  //   //   height: auto;
+  //   //   padding: 10px;
+  //   // }
+  // }
+
+  // /* アコーディオンメニュー全体のサイズ・位置 */
+  // .p-gnavi__main {
+  //   display: block;       // メインメニューを縦に並べる
+  //   //position: relative;   // 
+  //   //height: 50px;
+  //   @include breakpoint (width_1201){
+  //     display: flex;  // メインメニューは横並び
+  //     //line-height: 70px;
+  //   }
+  //   // width: 100%;//.p-gnavi（親）に持って行った）
+  //   //margin: 0 auto;
+  //   // position: fixed;  // 画面の絶対配置になる値。ページではなく画面に表示されている領域を起点として配置できるようになる。
+
+  //   // メニュー内全てに反映される項目
+  //   a{
+  //     color: $color--sentence-black;
+  //     //padding: 10px;
+  //   }
+
+  //   //
+  //   // > li{
+  //   //   padding: 10px;
+  //   // }
+  // }
+  
+  // // /* クリック領域 */
+  // // .p-gnavi__main {
+  // //   display: flex;
+
+  // /* ホバー領域 */
+  // .p-gnavi__main-list {
+  //   display: block;       // メインメニューを縦に並べる
+  //   position: relative;                 /*相対位置への配置*/
+  //   background-color: $color--white;
+  //   //text-align: left;
+  //   line-height: 50px;
+  //   cursor: pointer;  /*リンクカーソル*/
+
+  //   @include breakpoint (width_1201){
+  //     line-height: 70px;
+  //   }
+
+  //   // > li{
+  //   //   padding: 10px;
+  //   // }
+
+  //   // > a &:hover {
+  //   //   background-color: $color--background-color-hover;
+  //   // }
+
+  //   /* メインメニューli */
+  //   > a{
+  //     display: block;     //有効にするとホバーは当たるけど、余白が増える
+  //     font-weight: 700;               /*太字*/
+  //     //padding: 10px;
+
+  //     &:hover {
+  //       background-color: $color--background-color-hover;
+  //     }
+
+  //     //プラスの横線
+  //     &:before{
+  //       content: "";
+  //       position: absolute;
+  //       top: 25px;
+  //       right: 13px;
+  //       width: 24px;
+  //       height: 2px;
+  //       background: $color--sentence-black;
+  //       transform: translateY(-50%);
+        
+  //     }
+  //     //プラス縦線
+  //     &:after{
+  //       content: "";
+  //       position: absolute;
+  //       top: 25px;
+  //       right: 24px;
+  //       width: 2px;
+  //       height: 24px;
+  //       background: $color--sentence-black;
+  //       transform: translateY(-50%);
+  //       transition: .3s;
+  //     }
+  //   }
+  // }
+
+  //   /* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
+  //   /* .p-gnavi__main-list.open > a:after { */
+  //   .p-gnavi__main-list.open:after {
+  //     top: 25%;
+  //     opacity: 0;
+  //     transform: rotate(90deg);
+  //   }
+
+  
+  // /* ホバーしたら表示される領域（サブメニュー） */
+  // .p-gnavi__sub {
+  //   display: none;
+  //   color: $color--sentence-black;
+  //   font-weight: 400;
+  //   background: $color--white;
+  //   line-height: 50px;
+
+  //   @include breakpoint ( width_1201 ){
+  //       position: absolute;
+  //   }
+
+  //   > a{
+  //     display: block;
+  //     width: 100%;
+  //     height: 100%;
+  //     padding: 10px 10px 10px 25px;
+  //     font-weight: 400;
+  //   }
+  //   // 
+  //   // > li {
+  //   // }
+      
+  //   //text-align: left;
+  //   &:hover {
+  //     background-color: $color--background-color-hover;
+  //   }
+  //   //
+  //   // padding: 2em 1em;
+  //   // background-color: #ffccbc;
+  //   // 
+  //   // a{
+  //   //   display: block;
+  //   //   width: 100%;
+  //   //   height: 100%;
+  //   //   padding: 2em 1em;
+
+  //   // }
+  // }
+
+  /*---------- 以上、20210504 コメントアウト部終了 ----------*/
 
 
 

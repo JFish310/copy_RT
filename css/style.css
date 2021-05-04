@@ -431,6 +431,8 @@ a {
   background-color: #FFFFFF;
 }
 
+/* 2021.05.04 整頓 開始 */
+/* nav */
 .p-gnavi {
   top: 50px;
   position: absolute;
@@ -438,6 +440,7 @@ a {
 }
 
 /* アコーディオンメニュー全体のサイズ・位置 */
+/* ul */
 .p-gnavi__main {
   display: block;
 }
@@ -452,16 +455,15 @@ a {
   color: #121212;
 }
 
-/* ホバー領域 */
+/* メインメニュー li ホバー領域*/
 .p-gnavi__main-list {
   display: block;
   position: relative;
   /*相対位置への配置*/
   background-color: #FFFFFF;
-  line-height: 50px;
   cursor: pointer;
   /*リンクカーソル*/
-  /* メインメニューli */
+  /* メインメニューli のみ*/
 }
 
 @media (min-width: 1201px) {
@@ -473,7 +475,7 @@ a {
 .p-gnavi__main-list > a {
   display: block;
   font-weight: 700;
-  /*太字*/
+  padding: 10px;
 }
 
 .p-gnavi__main-list > a:hover {
@@ -503,21 +505,17 @@ a {
   transition: .3s;
 }
 
-/* ③オープン時にopenクラスを付与（縦線を回転させて非表示に） */
-/* .p-gnavi__main-list.open > a:after { */
-.p-gnavi__main-list.open:after {
+/* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
+.p-gnavi__main-list.open > a:after {
   top: 25%;
   opacity: 0;
   transform: rotate(90deg);
 }
 
-/* ホバーしたら表示される領域（サブメニュー） */
+/* サブメニュー ul （ホバーしたら表示される領域） */
 .p-gnavi__sub {
   display: none;
-  color: #121212;
-  font-weight: 400;
   background: #FFFFFF;
-  line-height: 50px;
 }
 
 @media (min-width: 1201px) {
@@ -526,18 +524,18 @@ a {
   }
 }
 
-.p-gnavi__sub > a {
+.p-gnavi__sub > li a {
   display: block;
-  width: 100%;
-  height: 100%;
   padding: 10px 10px 10px 25px;
-  font-weight: 400;
 }
 
-.p-gnavi__sub:hover {
+.p-gnavi__sub > li a:hover {
   background-color: #f3fafb;
 }
 
+/* 2021.05.04 整頓 終了 */
+/*---------- 以下、20210504 コメントアウト部開始 ----------*/
+/*---------- 以上、20210504 コメントアウト部終了 ----------*/
 /* マンガでわかるボタン */
 p.c-button-first {
   width: auto;
