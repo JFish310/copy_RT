@@ -1,0 +1,27 @@
+    /* */
+    .u-display__menu{
+
+        &:last-of-type{
+            display: none;
+            @include breakpoint ( width_1201 ){
+              display: block;
+            }
+        }
+
+        // a{
+        //     // モバイル版　非表示
+        //     display: none;
+        //     // PC版　表示
+        //     @include breakpoint ( width_1201 ){
+        //         display: block;
+        //     }
+        // }
+        // &:last-of-type{
+        //     display: none;
+
+        // }
+    }
+
+    // .u-display__sub-menu{
+    //     nth
+    // }

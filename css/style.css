@@ -540,6 +540,24 @@ a {
   }
 }
 
+.p-gnavi__main-list:nth-of-type(3) > a:before {
+  display: none;
+}
+
+.p-gnavi__main-list:nth-of-type(3) > a:after {
+  display: none;
+}
+
+.p-gnavi__main-list:last-of-type {
+  display: none;
+}
+
+@media (min-width: 1201px) {
+  .p-gnavi__main-list:last-of-type {
+    display: block;
+  }
+}
+
 /* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
 .p-gnavi__main-list.open > a:after {
   top: 25%;
@@ -617,5 +635,18 @@ p.c-button-first a {
   p.c-button-first a {
     font-size: 1.8rem;
   }
+}
+
+/* メインメニュー「受講お申し込み」への色指定 */
+.u-color__menu {
+  background-color: #2498b3;
+}
+
+.u-color__menu > a {
+  color: #FFFFFF;
+}
+
+.u-color__menu > a:hover {
+  background-color: #2498b3;
 }
 /*# sourceMappingURL=style.css.map */

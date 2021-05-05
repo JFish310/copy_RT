@@ -1,0 +1,11 @@
+    /* メインメニュー「受講お申し込み」への色指定 */
+    .u-color__menu{
+        background-color: $color--deep-blue;
+        > a{
+            color: $color--white;
+            &:hover {
+                // ホバー時背景色
+                background-color: $color--deep-blue;
+            }
+        }
+    }
