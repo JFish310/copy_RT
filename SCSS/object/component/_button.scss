@@ -66,8 +66,10 @@
   /* ul */
   .p-gnavi__main {
     display: block;       // メインメニューを縦に並べる
+    
     @include breakpoint (width_1201){
       display: flex;      // メインメニューを横並び
+      // flex-direction: row; // 縦並び
     }
     
     // メニュー内全てに反映される項目
@@ -84,18 +86,23 @@
     //line-height: 50px;
     cursor: pointer;  /*リンクカーソル*/
 
-    @include breakpoint (width_1201){
-      line-height: 70px;
-    }
+    /* サブメニューにまで影響があるのでコメントアウト */
+    // @include breakpoint (width_1201){
+    //   line-height: 70px;
+    // }
 
     /* メインメニューli のみ*/
     > a{
       display: block;     // 有効にするとホバーは当たるけど、余白が増える
       font-weight: 700;   // メインメニューliのみ、太字
       padding: 10px;
+      
       // 1201px以上だと左右だけpaddingなし
       @include breakpoint ( width_1201 ){
+        display: flex;        // ↓有効にするために設定
+        align-items: center;  // メインメニューの中央寄せ
         padding: 0 15px;
+        line-height: 70px;
       }
 
       &:hover {
@@ -164,7 +171,7 @@
     > li a{
       display: block;
       // width: 100%;
-      // height: 100%;
+      white-space: nowrap;    // 改行させない
       padding: 10px 10px 10px 25px;
       @include breakpoint ( width_1201 ){
         // display: ; // aタグの周りの余白…？

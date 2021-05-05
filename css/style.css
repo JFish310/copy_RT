@@ -469,13 +469,8 @@ a {
   background-color: #FFFFFF;
   cursor: pointer;
   /*リンクカーソル*/
+  /* サブメニューにまで影響があるのでコメントアウト */
   /* メインメニューli のみ*/
-}
-
-@media (min-width: 1201px) {
-  .p-gnavi__main-list {
-    line-height: 70px;
-  }
 }
 
 .p-gnavi__main-list > a {
@@ -486,7 +481,10 @@ a {
 
 @media (min-width: 1201px) {
   .p-gnavi__main-list > a {
+    display: flex;
+    align-items: center;
     padding: 0 15px;
+    line-height: 70px;
   }
 }
 
@@ -557,6 +555,7 @@ a {
 
 .p-gnavi__sub > li a {
   display: block;
+  white-space: nowrap;
   padding: 10px 10px 10px 25px;
 }
 
