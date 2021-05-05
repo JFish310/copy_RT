@@ -56,9 +56,16 @@
   .p-gnavi{
     position: absolute; // 絶対配置を指定する値
     top: 50px;          // 表示位置を指定するために使うもの
+    left: 0;            // 表示位置を指定するために使うもの（メニューの左寄せ）
     width: 100%;        // .p-gnavi__mainから引っ張ってきた
+
     @include breakpoint (width_1201){
       top: auto;
+    }
+
+    // ・を削除
+    li{
+      list-style: none;
     }
   }
 

@@ -20,8 +20,7 @@
   }
 
 
-/* RTロゴ */
-
+  /* RTロゴ */
   .l-header__title{
     margin: 10px;
     
@@ -73,22 +72,39 @@
     }
   }
 
-  /* ハンバーガーメニューボタン */
-  .c-button{
-    span{
+  /* メニュークラス */
+  .l-header__menu{
+    /* ハンバーガーメニューボタン */
+    .c-button{
+      // span{
+        @include breakpoint (width_1201){
+          display: none;
+        }
+      // }
+    }
+
+    /* メニュー */
+    .p-gnavi{
+      display: none;
+      //margin-top: 0;
       @include breakpoint (width_1201){
-        display: none;
+        display: contents;
       }
     }
   }
 
-  .p-gnavi{
-    // ・を削除
-    li{
-      list-style: none;
-    }
-    display: none;
-    @include breakpoint (width_1201){
-      display: initial;
-    }
-  }
+  // .l-header__menu .c-button{
+  //   span{
+  //     @include breakpoint (width_1201){
+  //       display: none;
+  //     }
+  //   }
+  // }
+
+  // .l-header__menu .p-gnavi{
+  //   display: none;
+  //   margin-top: 0;
+  //   @include breakpoint (width_1201){
+  //     display: initial;
+  //   }
+  // }

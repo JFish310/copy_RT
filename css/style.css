@@ -43,6 +43,7 @@ a {
     }
   }
   */
+/* variable */
 /* ヘッダー全般 */
 .l-header {
   width: 100%;
@@ -118,24 +119,25 @@ a {
   }
 }
 
-/* ハンバーガーメニューボタン */
+/* メニュークラス */
+.l-header__menu {
+  /* ハンバーガーメニューボタン */
+  /* メニュー */
+}
+
 @media (min-width: 1201px) {
-  .c-button span {
+  .l-header__menu .c-button {
     display: none;
   }
 }
 
-.p-gnavi {
+.l-header__menu .p-gnavi {
   display: none;
 }
 
-.p-gnavi li {
-  list-style: none;
-}
-
 @media (min-width: 1201px) {
-  .p-gnavi {
-    display: initial;
+  .l-header__menu .p-gnavi {
+    display: contents;
   }
 }
 
@@ -246,7 +248,7 @@ a {
 }
 
 .p-top-head__body p {
-  color: #121212;
+  color: #131d34;
   margin: .5em 0;
   font-size: 1.3rem;
   font-weight: 700;
@@ -436,6 +438,7 @@ a {
 .p-gnavi {
   position: absolute;
   top: 50px;
+  left: 0;
   width: 100%;
 }
 
@@ -443,6 +446,10 @@ a {
   .p-gnavi {
     top: auto;
   }
+}
+
+.p-gnavi li {
+  list-style: none;
 }
 
 /* アコーディオンメニュー全体のサイズ・位置 */
@@ -458,7 +465,7 @@ a {
 }
 
 .p-gnavi__main a {
-  color: #121212;
+  color: #131d34;
 }
 
 /* メインメニュー li ホバー領域*/
@@ -505,7 +512,7 @@ a {
   right: 13px;
   width: 24px;
   height: 2px;
-  background: #121212;
+  background: #131d34;
   transform: translateY(-50%);
 }
 
@@ -522,7 +529,7 @@ a {
   right: 24px;
   width: 2px;
   height: 24px;
-  background: #121212;
+  background: #131d34;
   transform: translateY(-50%);
   transition: .3s;
 }
