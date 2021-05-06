@@ -1,25 +1,26 @@
-    /* */
+    /* 表示の切り替えを行います */
     .u-display__menu{
-
+        // 「受講申し込み」表示切り分け
         &:last-of-type{
+            // モバイル版　非表示
             display: none;
             @include breakpoint ( width_1201 ){
-              display: block;
+                // PC版　表示
+                display: block;
             }
         }
 
-        // a{
-        //     // モバイル版　非表示
-        //     display: none;
-        //     // PC版　表示
-        //     @include breakpoint ( width_1201 ){
-        //         display: block;
-        //     }
-        // }
-        // &:last-of-type{
-        //     display: none;
-
-        // }
+        // 「講師の紹介」のプラスマイナスボタンの非表示
+        &:nth-of-type(3) {
+            > a {
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
     }
 
     // .u-display__sub-menu{

@@ -540,24 +540,6 @@ a {
   }
 }
 
-.p-gnavi__main-list:nth-of-type(3) > a:before {
-  display: none;
-}
-
-.p-gnavi__main-list:nth-of-type(3) > a:after {
-  display: none;
-}
-
-.p-gnavi__main-list:last-of-type {
-  display: none;
-}
-
-@media (min-width: 1201px) {
-  .p-gnavi__main-list:last-of-type {
-    display: block;
-  }
-}
-
 /* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
 .p-gnavi__main-list.open > a:after {
   top: 25%;
@@ -648,5 +630,24 @@ p.c-button-first a {
 
 .u-color__menu > a:hover {
   background-color: #2498b3;
+}
+
+/* 表示の切り替えを行います */
+.u-display__menu:last-of-type {
+  display: none;
+}
+
+@media (min-width: 1201px) {
+  .u-display__menu:last-of-type {
+    display: block;
+  }
+}
+
+.u-display__menu:nth-of-type(3) > a:before {
+  display: none;
+}
+
+.u-display__menu:nth-of-type(3) > a:after {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

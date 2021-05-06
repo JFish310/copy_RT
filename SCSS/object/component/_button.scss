@@ -153,25 +153,25 @@
       }
     }
 
-    // 「講師の紹介」のプラスマイナスボタンの非表示
-    &:nth-of-type(3) {
-      > a {
-        &:before {
-          display: none;
-        }
-        &:after {
-          display: none;
-        }
-      }
-    }
+    // // 「講師の紹介」のプラスマイナスボタンの非表示
+    // &:nth-of-type(3) {
+    //   > a {
+    //     &:before {
+    //       display: none;
+    //     }
+    //     &:after {
+    //       display: none;
+    //     }
+    //   }
+    // }
 
-    // 「受講申し込み」表示切り分け
-    &:last-of-type{
-      display: none;
-      @include breakpoint ( width_1201 ){
-        display: block;
-      }
-    }
+    // // 「受講申し込み」表示切り分け
+    // &:last-of-type{
+    //   display: none;
+    //   @include breakpoint ( width_1201 ){
+    //     display: block;
+    //   }
+    // }
   }
 
   /* ホバー時にopenクラスを付与（縦線を回転させて非表示に） */
