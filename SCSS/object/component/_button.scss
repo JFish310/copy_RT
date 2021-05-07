@@ -115,6 +115,7 @@
       &:hover {
         // ホバー時背景色
         background-color: $color--background-color-hover;
+        // background:linear-gradient(90deg,$color--background-color-hover 0%,$color--background-color-hover 50%,$color--background-color-buttun-hover 50%,$color--background-color-buttun-hover 100%); // プラマイボタン背景（これではない）
         @include breakpoint ( width_1201 ){
           background-color: $color--background-color-hover-deep;
         }
@@ -145,7 +146,7 @@
         height: 24px;
         background: $color--sentence-black;
         transform: translateY(-50%);
-        transition: .3s;
+        //transition: .3s;// いらない
         // 1201px以上だと非表示
         @include breakpoint ( width_1201 ){
           content: none;
@@ -180,7 +181,56 @@
     opacity: 0;
     transform: rotate(90deg);
   }
+    
+  //   // display: block;
+  //   // content: "";
+  //   // position: absolute;
+  //   // top: 0;
+  //   // right: 0;
+  //   // bottom: 0;
+  //   // width: 50px;
+  //   // height: auto;
+  //   // margin-top: 0;
+  //   // background-color: #f7f7f7
+  // }
+
+
+  // /* プラスマイナスボタン背景（グレイ） */
+  // .p-gnavi__main-list.open > a::after{
+  //   display: block;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 50px;
+  //   height: auto;
+  //   // height: 50px;
+  //   margin-top: 0;
+  //   background-color: #f7f7f7
+  // }
   
+    
+//   .menu-item-has-children.open>a {
+//     position:relative
+// }
+
+  // @include breakpoint ( width_1201 ){
+  //   .p-gnavi__main-list.open > a:after {
+  //       display: block;
+  //       content: "";
+  //       position: absolute;
+  //       top: 0;
+  //       right: 0;
+  //       bottom: 0;
+  //       width: 50px;
+  //       height: auto;
+  //       margin-top: 0;
+  //       background-color: #f7f7f7
+  //   }
+  // }
+
+
     
   /* サブメニュー ul （ホバーしたら表示される領域） */
   .p-gnavi__sub {
