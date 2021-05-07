@@ -18,31 +18,6 @@ a {
   text-decoration: none;
 }
 
-/*
-
-  @mixin breakpoint( $point ) {
-    @if $point == pc {
-      @media ( min-width: 768px ) and ( max-width:1199px) {
-        @content ;
-      }
-    }
-    @if $point == wide {
-      @media ( min-width: 1200px ) {
-        @content ;
-      }
-    }
-    @if $point == sp-pc {
-      @media ( max-width: 1119px ) {
-        @content ;
-      }
-    }
-    @if $point == pc-wide {
-      @media ( min-width: 768px ) {
-        @content ;
-      }
-    }
-  }
-  */
 /* variable */
 /* ヘッダー全般 */
 .l-header {
@@ -236,6 +211,7 @@ a {
   background-color: #FFFFFF;
   text-align: center;
   /* 「はじめまして」の文章のところ */
+  /* 「はじめまして」上のRTロゴ */
 }
 
 @media (min-width: 767px) {
@@ -289,9 +265,11 @@ a {
   }
 }
 
+/* 理念 */
 .p-philosophy {
   margin: 0 10px;
   margin-top: 0;
+  /* センタリング */
   display: flex;
   flex-direction: column;
   /* 積み重なるように配置する */
@@ -301,6 +279,7 @@ a {
   color: #FFFFFF;
   font-weight: 700;
   padding: 4em 0 0;
+  /* レスポンシブ対応 */
 }
 
 @media (min-width: 767px) {
@@ -332,6 +311,7 @@ a {
   }
 }
 
+/* アイコン */
 .p-philosophy__icon {
   display: flex;
   justify-content: center;
@@ -348,6 +328,7 @@ a {
   font-size: 100px;
 }
 
+/* タイトル */
 .p-philosophy__title {
   margin: .2em 0 0;
   font-size: 2.4rem;
@@ -357,6 +338,7 @@ a {
   text-align: center;
 }
 
+/* 説明文 */
 .p-philosophy__sentence {
   justify-content: center;
   /* アイテムを中央に寄せる */
@@ -365,7 +347,6 @@ a {
   font-weight: 700;
 }
 
-/*  */
 /* ハンバーガーメニューボタン */
 .c-button {
   display: block;
@@ -468,14 +449,14 @@ a {
   color: #131d34;
 }
 
-/* メインメニュー li ホバー領域*/
+/* メインメニュー li ホバー領域 */
 .p-gnavi__main-list {
   display: block;
   position: relative;
-  /*相対位置への配置*/
+  /* 相対位置への配置 */
   background-color: #FFFFFF;
   cursor: pointer;
-  /*リンクカーソル*/
+  /* リンクカーソル */
   /* サブメニューにまで影響があるのでコメントアウト */
   /* メインメニューli のみ*/
 }
@@ -583,8 +564,6 @@ a {
 }
 
 /* 2021.05.04 整頓 終了 */
-/*---------- 以下、20210504 コメントアウト部開始 ----------*/
-/*---------- 以上、20210504 コメントアウト部終了 ----------*/
 /* マンガでわかるボタン */
 p.c-button-first {
   width: auto;
