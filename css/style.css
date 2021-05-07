@@ -531,7 +531,6 @@ a {
   height: 24px;
   background: #131d34;
   transform: translateY(-50%);
-  transition: .3s;
 }
 
 @media (min-width: 1201px) {
