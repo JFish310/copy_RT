@@ -254,13 +254,13 @@ a {
   }
 }
 
-.l-wrap {
+.c-wrap {
   max-width: 100%;
   background-color: #000000;
 }
 
 @media (min-width: 1078px) {
-  .l-wrap {
+  .c-wrap {
     padding-bottom: 4em;
   }
 }
@@ -361,6 +361,8 @@ a {
   /*値が大きいものほど前面（手前）に表示される （0 が基準）*/
   border: none;
   /*線なし*/
+  cursor: pointer;
+  /* リンクカーソル */
 }
 
 .bar {
@@ -573,6 +575,8 @@ p.c-button-first {
   padding: 12px 18px;
   border-radius: 4px;
   font-weight: 700;
+  cursor: pointer;
+  /* リンクカーソル */
   background-color: #2498b3;
   border-color: #2498b3;
   line-height: 1;

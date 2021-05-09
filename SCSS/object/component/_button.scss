@@ -6,6 +6,7 @@
     position: relative;   /*通常の位置を基準とした相対的な配置*/
     z-index: 3;           /*値が大きいものほど前面（手前）に表示される （0 が基準）*/
     border:none;          /*線なし*/
+    cursor: pointer;      /* リンクカーソル */
   }
   .bar{
     width: 23px;
@@ -220,6 +221,7 @@
     //margin: 0 10px 1em 5px;
     border-radius: 4px; // 四隅を丸く
     font-weight: 700;   // フォントの太さ
+    cursor: pointer;    /* リンクカーソル */
 
     background-color: $color--deep-blue;
     border-color: $color--deep-blue;
